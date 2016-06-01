@@ -1,0 +1,24 @@
+<header class="site-header">
+	 <div class="wrapper">
+	 			<div class="logo">
+	 					{% if site.imglogo.enable && site.imglogo.src %}
+						<div class="logo-img">
+							<a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/{{ site.imglogo.src }}" alt="{{ site.title }}" title="{{ site.title }}"/></a>
+						</div>
+						{% endif %}
+						<div class="logo-text">
+							<h1 class="logo-name"><a href="{{ site.baseurl }}/" title="{{ site.title }}">{{ site.title }}</a></h1>
+						  <h2 class="logo-intro">{% if site.tagline %}{{ site.tagline }}{% endif %}</h2>
+						</div>
+	 			</div>
+	 			<div class="navbar">
+	 						 <ul class="nav">
+	 						 		{% for my_page in site.pages %}
+					          {% if my_page.title %}
+					          <li><a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a></li>
+					          {% endif %}
+					        {% endfor %}
+	 						 </ul>
+	 			</div>
+	 </div>
+</header>
