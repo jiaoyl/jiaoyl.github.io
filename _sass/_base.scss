@@ -43,7 +43,7 @@ $c-primary:               #0078E7 !default;//主色
 //----------------------------------------------------- 
 // 如果只有一个值则滑过的值为这个值的darken 5%，如果
 // 有两个值则第二个值为滑过的值
-$linkColor:             #08c !default;
+$linkColor:             #696969 #b0a0aa;
 
 // scaffolding
 //----------------------------------------------------- 
@@ -54,6 +54,42 @@ $textColor:             $c-grayDarker !default;
 // 变量分别为：是否输出表单的占位符placeholder样式，文本色
 $placeholder:           true $c-gray !default;
 
+
+
+@mixin box-sizing($sizing:border-box){
+    -moz-box-sizing: $sizing;
+ -webkit-box-sizing: $sizing;
+         box-sizing: $sizing;    
+}
+
+@mixin border-radius($radius:6px){
+    -moz-border-radius: $radius;
+ -webkit-border-radius: $radius;
+         border-radius: $radius;
+    
+}
+
+@mixin opacity($opacity:100) {//透明
+    opacity: $opacity / 100;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$opacity)";
+    filter: alpha(opacity=$opacity);    
+}
+
+@mixin inline-block{
+    display:inline-block;
+    *display:inline;
+    *zoom: 1;
+}
+
+@mixin max-screen($res){
+  @media only screen and ( max-width: $res )
+  {
+    @content;
+  }
+}
+
+
+
 /*reset*/
 body{ 
     font-size: $baseFontSize;
@@ -62,6 +98,8 @@ body{
     color:$textColor;
     background-color:$bodyBgColor;
     margin: 0;
+    padding: 0;
+    text-shadow: 0 1px #fff;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
     display: block;
