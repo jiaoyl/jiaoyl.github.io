@@ -82,7 +82,7 @@ $placeholder:           true $c-gray !default;
 }
 
 @mixin max-screen($res){
-  @media only screen and ( max-width: $res )
+  @media ( max-width: $res )
   {
     @content;
   }
