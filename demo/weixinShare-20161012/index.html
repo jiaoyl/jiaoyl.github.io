@@ -8,10 +8,23 @@
     <meta name="description" content="手机浏览器内点击页面链接分享代码--仅支持uc及qq浏览器  nativeShare.js" />
     <script src="./nativeShare.js"></script>
     <link rel="stylesheet" href="./nativeShare.css"/>
+    <style>
+    	*{ margin: 0; padding: 0;}
+    	body{font-size: 14px; line-height:1.6; color: #333;}
+    	
+    	ul,li{list-style: none;}
+    	h3{font-size: 1.2em;}
+    	
+    	.wrapper{padding:20px; max-width: 640px; margin: 0 auto; box-sizing: border-box;}
+    	#navigator01 li {margin-bottom: 10px; border-bottom: 1px dashed #CCCCCC;}
+    </style>
 </head>
 <body>
     <div id="nativeShare"></div>
-
+    <div class="wrapper">
+    	<h2>浏览器的信息  navigator</h2>
+		<ul id="navigator01"></ul>
+	</div>
     <script>
         var config = {
             url:'http://jiaoyl.github.io/',
@@ -22,6 +35,50 @@
             from:'from-jiao的博客'
         };
         var share_obj = new nativeShare('nativeShare',config);
+    
+    
+    	function $id(id){
+    		if(document.getElementById(id)){
+    			return document.getElementById(id);
+    		}
+    	}
+    	/*
+    	 *浏览器的信息 navigator
+    	 * appCodeName	返回浏览器的代码名。
+    	 * appMinorVersion	返回浏览器的次级版本。
+    	 * appName	返回浏览器的名称。
+    	 * appVersion	返回浏览器的平台和版本信息。
+    	 * browserLanguage	返回当前浏览器的语言。
+    	 * cookieEnabled	返回指明浏览器中是否启用 cookie 的布尔值。
+    	 * cpuClass	返回浏览器系统的 CPU 等级。
+    	 * onLine	返回指明系统是否处于脱机模式的布尔值。
+    	 * platform	返回运行浏览器的操作系统平台。
+    	 * systemLanguage	返回 OS 使用的默认语言。
+    	 * userAgent	返回由客户机发送服务器的 user-agent 头部的值。
+    	 * userLanguage	返回 OS 的自然语言设置。 
+    	 * */
+    	var ua={
+    		j01:'userAgent 返回由客户机发送服务器的 user-agent头部的值------'+ navigator.userAgent,
+    		j02:'appVersion 返回浏览器的平台和版本信息------'+ navigator.appVersion,    		
+    		j03:'appName 返回浏览器的名称------'+ navigator.appName,
+    		j04:'appMinorVersion 返回浏览器的次级版本------'+ navigator.appMinorVersion,
+    		j05:'browserLanguage 返回当前浏览器的语言------'+ navigator.browserLanguage,
+    		j06:'cookieEnabled 返回浏览器的代码名------'+ navigator.cookieEnabled,
+    		j07:'cpuClass 返回浏览器系统的 CPU 等级------'+ navigator.cpuClass,
+    		j08:'onLine 返回指明系统是否处于脱机模式的布尔值------'+ navigator.onLine,
+    		j09:'platform 返回运行浏览器的操作系统平台------'+ navigator.platform,
+    		j010:'systemLanguage 返回 OS 使用的默认语言------'+ navigator.systemLanguage,
+    		j011:'appCodeName 返回浏览器的代码名------'+ navigator.appCodeName,
+    		j012:'userLanguage 返回 OS 的自然语言设置------'+ navigator.userLanguage
+    	};
+    	//$id('navigator01').innerHTML='<li><h3>appCodeName	返回浏览器的代码名</h3><p>'+ua.JappCodeName+'</p></li>';
+    	for(i=1;i<13;i++){
+    		var liNode=document.createElement('li');
+    		liNode.appendChild(document.createTextNode(ua["j0"+i]));
+    		$id('navigator01').appendChild(liNode);
+    	}
+    	
     </script>
+    
 </body>
 </html>
