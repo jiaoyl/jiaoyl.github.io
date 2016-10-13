@@ -20,7 +20,7 @@
 				
 				<h2>卡片</h2>
 				
-				<div id="J_myDiv" class="carSlider">
+				<div class="carSlider">
 						<div class="conlist">
 							<div class="item"><img src="img/01.jpg"></div>
 							<div class="item"><img src="img/02.jpg"></div>
@@ -33,50 +33,39 @@
 			</div>
 			
 			<script>
-			  function getCookie(c_name)
-            {
-            if (document.cookie.length>0)
-            { 
-            c_start=document.cookie.indexOf(c_name + "=")
-            if (c_start!=-1)
-            { 
-            c_start=c_start + c_name.length+1 
-            c_end=document.cookie.indexOf(";",c_start)
-            if (c_end==-1) c_end=document.cookie.length
-            return unescape(document.cookie.substring(c_start,c_end))
-            } 
-            }
-            return ""
-            }
-
-            function setCookie(c_name,value,expiredays)
-            {
-              var exdate=new Date()
-              exdate.setDate(exdate.getDate()+expiredays)
-              document.cookie=c_name+ "=" +escape(value)+
-              ((expiredays==null) ? "" : "; expires="+exdate.toGMTString())
-            }
-
-            function checkCookie()
-            {
-            username=getCookie('username')
-            if (username!=null && username!="")
-              {alert('Welcome again '+username+'!')}
-            else 
-              {
-              username=prompt('Please enter your name:',"")
-              if (username!=null && username!="")
-                {
-                setCookie('username',username,365)
-                }
-              }
-            }
-            </script>
+			  var i=0;	
+			  var isHover=false;
+				function carSlider(){		
+					var $wrap=$('.carSlider');
+					var $con=$wrap.find('.conlist');
+					var $item=$con.find('.item');
+									
+					var len=$item.length;
+					var i=0;	
+			    var isHover=false;
+					$con.css('width',len*$wrap.width());
+					if (isHover) return;
+					i++;
+					if (i == len) i = 0;
+					showPic(i);
+					
+				}
+				showPic=function(i){
+					var $wrap=$('.carSlider');
+					var $con=$wrap.find('.conlist');
+					var swidth=$wrap.width();
+					var nowLeft=-i*swidth;
+					$con.stop().animate({"left":nowLeft},600);
+				}
 				
-			  
-
-     
-            
+    		$(function(){
+    			setInterval(carSlider, 2000);	
+    			$('.carSlider').hover(function(){
+	            isHover = true;
+	        },function(){ 
+	           isHover = false;
+	        });
+    		})
       </script>
 		
   </body>
