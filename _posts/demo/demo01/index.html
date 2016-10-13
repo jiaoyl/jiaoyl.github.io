@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link href="css/site.css" rel="stylesheet">
+    <script src="js/jquery-2.1.0.js"></script>   
+    <style>
+    	.carSlider{width: 500px; overflow: hidden; zoom: 1;}
+    	.carSlider .conlist{position: relative; height: 333px; overflow: hidden; zoom: 1;}
+    	.carSlider .conlist .item{float: left; width:500px; height: 333px;}
+    	.carSlider .conlist .item img{width: 100%; height: 100%;}
+    </style>
+  </head>
+  <body>		
+		
+			<div class="wrapper">
+				
+				<h2>卡片</h2>
+				
+				<div class="carSlider">
+						<div class="conlist">
+							<div class="item"><img src="img/01.jpg"></div>
+							<div class="item"><img src="img/02.jpg"></div>
+							<div class="item"><img src="img/03.jpg"></div>
+							<div class="item"><img src="img/04.jpg"></div>
+						</div>
+						<div><div class="btn prv">上一页</div><div class="btn next">下一页</div></div>
+				</div>
+				
+			</div>
+			
+			<script>
+			  var i=0;	
+			  var isHover=false;
+				function carSlider(){		
+					var $wrap=$('.carSlider');
+					var $con=$wrap.find('.conlist');
+					var $item=$con.find('.item');
+									
+					var len=$item.length;
+					var i=0;	
+			    var isHover=false;
+					$con.css('width',len*$wrap.width());
+					if (isHover) return;
+					i++;
+					if (i == len) i = 0;
+					showPic(i);
+					
+				}
+				showPic=function(i){
+					var $wrap=$('.carSlider');
+					var $con=$wrap.find('.conlist');
+					var swidth=$wrap.width();
+					var nowLeft=-i*swidth;
+					$con.stop().animate({"left":nowLeft},600);
+				}
+				
+    		$(function(){
+    			setInterval(carSlider, 2000);	
+    			$('.carSlider').hover(function(){
+	            isHover = true;
+	        },function(){ 
+	           isHover = false;
+	        });
+    		})
+      </script>
+		
+  </body>
+</html>
