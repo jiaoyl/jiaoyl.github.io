@@ -178,7 +178,7 @@
 .icon{@include inline-block; width: 25px; height: 25px;vertical-align: middle; margin: 0 5px;}
 
 @include max-screen(640px){
-    .sidebar{position: relative; width:100%;
+    .sidebar{position: relative; width:100%; height: auto;
         .bg-overlay{height:45%;}    
     }
     .header{min-height: auto;}

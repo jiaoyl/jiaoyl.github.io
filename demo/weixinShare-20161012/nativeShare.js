@@ -17,6 +17,8 @@ var nativeShare = function (elementNode, config) {
         uc: {forbid: 0, allow: 1}
     };
     var UA = navigator.appVersion;
+    //var iswxBrowser = (UA.split("MicroMessenger/").length > 1) ? ;
+    //UA.match(/MicroMessenger/i)
     var isqqBrowser = (UA.split("MQQBrowser/").length > 1) ? bLevel.qq.higher : bLevel.qq.forbid;
     var isucBrowser = (UA.split("UCBrowser/").length > 1) ? bLevel.uc.allow : bLevel.uc.forbid;
     var version = {
