@@ -33,7 +33,7 @@
 }
 
 @include max-screen(640px){
-   .wrapper{ width: auto; max-width: 640px;}
+   .wrapper{ width: 100%; max-width: 640px;}
 }
 
 

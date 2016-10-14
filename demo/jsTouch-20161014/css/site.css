@@ -127,7 +127,7 @@ input[type="radio"] {
 
 @media only screen and (max-width: 640px) {
   .wrapper {
-    width: auto;
+    width: 100%;
     max-width: 640px; } }
 .header {
   min-height: 20px;
