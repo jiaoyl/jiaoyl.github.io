@@ -205,7 +205,6 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
        height:700px;
        transform:scale(0.8) translateX(-10%) translateY(-10%);
    }   
-   .round04{transform:translateX(-10%);}
 }
 
 @include maxmin-screen(481px,640px){
@@ -226,7 +225,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
        height:392px;
        transform:scale(0.5) translateX(-20%) translateY(-10%);
    }   
-   .round04{transform:translateX(-10%);}
+   .round04{transform:translateX(8%);}
 }
 
 @include maxmin-screen(321px,360px){
@@ -237,7 +236,6 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
        height:350px;
        transform:scale(0.4) translateX(-12%) translateY(-10%);
    }   
-   .round04{transform:translateX(-10%);}
 }
 
 @include max-screen(320px){
@@ -247,6 +245,5 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
    .animation{
        height:280px;
        transform:scale(0.3) translateX(-12%) translateY(-10%);
-   }   
-   .round04{transform:translateX(-10%);}
+   }
 }

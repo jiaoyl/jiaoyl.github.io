@@ -407,10 +407,7 @@ body {
 
   .animation {
     height: 700px;
-    transform: scale(0.8) translateX(-10%) translateY(-10%); }
-
-  .round04 {
-    transform: translateX(-10%); } }
+    transform: scale(0.8) translateX(-10%) translateY(-10%); } }
 @media only screen and (min-width: 481px) and (max-width: 640px) {
   .header {
     padding-top: 20px;
@@ -441,7 +438,7 @@ body {
     transform: scale(0.5) translateX(-20%) translateY(-10%); }
 
   .round04 {
-    transform: translateX(-10%); } }
+    transform: translateX(8%); } }
 @media only screen and (min-width: 321px) and (max-width: 360px) {
   .header {
     padding-top: 20px;
@@ -455,10 +452,7 @@ body {
 
   .animation {
     height: 350px;
-    transform: scale(0.4) translateX(-12%) translateY(-10%); }
-
-  .round04 {
-    transform: translateX(-10%); } }
+    transform: scale(0.4) translateX(-12%) translateY(-10%); } }
 @media only screen and (max-width: 320px) {
   .header {
     padding-top: 20px;
@@ -472,7 +466,4 @@ body {
 
   .animation {
     height: 280px;
-    transform: scale(0.3) translateX(-12%) translateY(-10%); }
-
-  .round04 {
-    transform: translateX(-10%); } }
+    transform: scale(0.3) translateX(-12%) translateY(-10%); } }
