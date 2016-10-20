@@ -161,10 +161,10 @@ body {
   font-size: 3em;
   line-height: 1.6;
   color: #3f3f3f;
-  -webkit-opacity: 0;
-  -moz-opacity: 0;
-  opacity: 0;
-  filter: alpha(opacity=0); }
+  animation: fade 3s both linear;
+  -webkit-animation: fade 3s both linear;
+  -moz-animation: fade 3s both linear;
+  -ms-animation: fade 3s both linear; }
 
 .round:after {
   display: inline-block;
@@ -191,10 +191,10 @@ body {
   -webkit-border-radius: 50%;
   border-radius: 50%;
   background: #f8c039;
-  animation: donghua1 5s 1 linear 2s alternate;
-  -webkit-animation: donghua1 5s 1 linear 2s alternate;
-  -moz-animation: donghua1 5s 1 linear 2s alternate;
-  -ms-animation: donghua1 5s 1 linear 2s alternate; }
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -ms-animation-delay: 1s; }
 
 .round01 .cont:before {
   content: "\20";
@@ -244,10 +244,10 @@ body {
   background: url(../img/zhu_01.png) no-repeat center center;
   background-size: 100% 100%;
   color: #fff;
-  animation: donghua1 5s 1 linear 5s alternate;
-  -webkit-animation: donghua1 5s 1 linear 5s alternate;
-  -moz-animation: donghua1 5s 1 linear 5s alternate;
-  -ms-animation: donghua1 5s 1 linear 5s alternate; }
+  animation-delay: 3s;
+  -webkit-animation-delay: 3s;
+  -moz-animation-delay: 3s;
+  -ms-animation-delay: 3s; }
 
 .round03 {
   top: 50%;
@@ -260,11 +260,11 @@ body {
   border-radius: 50%;
   background: #f8c039;
   color: #fff;
-  animation: donghua1 5s 1 linear 9s alternate;
-  -webkit-animation: donghua1 5s 1 linear 9s alternate;
-  -moz-animation: donghua1 5s 1 linear 9s alternate;
-  -ms-animation: donghua1 5s 1 linear 9s alternate;
-  box-shadow: 0px 0px 80px #f8c039; }
+  box-shadow: 0px 0px 80px #f8c039;
+  animation-delay: 5s;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  -ms-animation-delay: 5s; }
 
 .round04 {
   top: 50%;
@@ -272,7 +272,14 @@ body {
   width: 700px;
   height: 620px;
   margin: -310px -350px 0 0;
-  animation: donghua1 8s linear 14s, donghua2 1000s linear 22s; }
+  animation-duration: 8s;
+  -webkit-animation-duration: 8s;
+  -moz-animation-duration: 8s;
+  -ms-animation-duration: 8s;
+  animation-delay: 8s;
+  -webkit-animation-delay: 8s;
+  -moz-animation-delay: 8s;
+  -ms-animation-delay: 8s; }
 
 .round04 .inner:after {
   display: inline-block;
@@ -364,34 +371,256 @@ body {
   background: #ff7827;
   color: #fff; }
 
-@keyframes donghua2 {
+.item {
+  position: absolute;
+  animation: fade 3s both linear;
+  -webkit-animation: fade 3s both linear;
+  -moz-animation: fade 3s both linear;
+  -ms-animation: fade 3s both linear; }
+
+.item01 {
+  top: 50%;
+  left: 50%;
+  margin-left: -60px;
+  margin-top: -305px;
+  animation-delay: 16s;
+  -webkit-animation-delay: 16s;
+  -moz-animation-delay: 16s;
+  -ms-animation-delay: 16s; }
+
+.item02 {
+  top: 50%;
+  left: 50%;
+  margin-left: -400px;
+  margin-top: -175px;
+  animation-delay: 19s;
+  -webkit-animation-delay: 19s;
+  -moz-animation-delay: 19s;
+  -ms-animation-delay: 19s; }
+
+.item03 {
+  top: 50%;
+  left: 50%;
+  margin-left: -230px;
+  margin-top: -170px;
+  animation-delay: 22s;
+  -webkit-animation-delay: 22s;
+  -moz-animation-delay: 22s;
+  -ms-animation-delay: 22s; }
+
+.item04 {
+  top: 50%;
+  right: 50%;
+  margin-right: -355px;
+  margin-top: -300px;
+  animation-delay: 25s;
+  -webkit-animation-delay: 25s;
+  -moz-animation-delay: 25s;
+  -ms-animation-delay: 25s; }
+
+.item05 {
+  top: 50%;
+  left: 50%;
+  margin-left: -170px;
+  margin-top: -190px;
+  animation-delay: 28s;
+  -webkit-animation-delay: 28s;
+  -moz-animation-delay: 28s;
+  -ms-animation-delay: 28s; }
+
+.item .cont {
+  position: relative;
+  display: inline-block;
+  font-size: 3em;
+  line-height: 70px;
+  height: 70px;
+  padding-right: 30px;
+  color: #fff;
+  white-space: nowrap;
+  background: #f8c039;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  margin-bottom: 30px; }
+
+.item .cont:before {
+  content: "\20";
+  position: absolute;
+  top: 50%;
+  left: -65px;
+  margin-top: -8px;
+  width: 16px;
+  height: 16px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  background: #f8c039; }
+
+.item .cont:after {
+  content: "\20";
+  position: absolute;
+  top: 10px;
+  left: -22px;
+  width: 51px;
+  height: 51px;
+  background: #f8c039;
+  transform: rotate(45deg);
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  z-index: -1; }
+
+.item .cont i {
+  font-style: normal; }
+
+@-webkit-keyframes fade {
   0% {
     -webkit-opacity: 0;
     -moz-opacity: 0;
     opacity: 0;
     filter: alpha(opacity=0); }
-  1% {
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
-    filter: alpha(opacity=100); }
-  100% {
-    -webkit-opacity: 1;
-    -moz-opacity: 1;
-    opacity: 1;
-    filter: alpha(opacity=100); } }
-@keyframes donghua1 {
-  0% {
-    -webkit-opacity: 0;
-    -moz-opacity: 0;
-    opacity: 0;
-    filter: alpha(opacity=0); }
-  50% {
+  30% {
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
     filter: alpha(opacity=100); }
   80% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); } }
+@-moz-keyframes fade {
+  0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  30% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  80% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); } }
+@-o-keyframes fade {
+  0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  30% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  80% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); } }
+@keyframes fade {
+  0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  30% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  80% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); }
+  100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); } }
+@-webkit-keyframes fadein {
+  0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-moz-keyframes fadein {
+  0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-o-keyframes fadein {
+  0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@keyframes fadein {
+  0% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); }
+  100% {
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    opacity: 1;
+    filter: alpha(opacity=100); } }
+@-webkit-keyframes fadeout {
+  100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); } }
+@-moz-keyframes fadeout {
+  100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); } }
+@-o-keyframes fadeout {
+  100% {
+    -webkit-opacity: 0;
+    -moz-opacity: 0;
+    opacity: 0;
+    filter: alpha(opacity=0); } }
+@keyframes fadeout {
+  0% {
     -webkit-opacity: 1;
     -moz-opacity: 1;
     opacity: 1;
@@ -438,7 +667,10 @@ body {
     transform: scale(0.5) translateX(-20%) translateY(-10%); }
 
   .round04 {
-    transform: translateX(8%); } }
+    transform: translateX(8%); }
+
+  .item {
+    transform: translateX(15%); } }
 @media only screen and (min-width: 321px) and (max-width: 360px) {
   .header {
     padding-top: 20px;

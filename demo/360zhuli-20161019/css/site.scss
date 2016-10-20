@@ -43,6 +43,7 @@
   }
 }
 
+
 @mixin animation($active,$time,$infinite:infinite,$delay:0,$linear:linear,$alternate:alternate) {//透明
         animation: $active $time $infinite $delay $linear $alternate;
 -webkit-animation: $active $time $infinite $delay $linear $alternate ;
@@ -74,7 +75,11 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     font-size: 3em;
     line-height:1.6;
     color: #3f3f3f;
-    @include opacity(0); 
+   // @include opacity(0); 
+     animation:fade 3s both linear;
+-webkit-animation:fade 3s both linear;
+   -moz-animation:fade 3s both linear;
+    -ms-animation:fade 3s both linear;
 }
 
 .round:after{ 
@@ -97,7 +102,11 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     margin: -300px -48px 0 0;
     @include round-radius(320px);    
     background: #f8c039;
-    @include animation(donghua1,5s,1,linear,2s,alternate);
+   // @include animation(donghua1,5s,1,linear,2s,alternate);       
+            animation-delay:1s;
+    -webkit-animation-delay: 1s;
+       -moz-animation-delay: 1s;
+        -ms-animation-delay: 1s;
 }
 .round01 .cont:before{
     content: "\20";
@@ -123,7 +132,11 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     background:url(../img/zhu_01.png) no-repeat center center;
     background-size: 100% 100%;
     color: #fff;
-    @include animation(donghua1,5s,1,linear,5s,alternate); 
+    //@include animation(donghua1,5s,1,linear,5s,alternate); 
+            animation-delay: 3s;
+    -webkit-animation-delay: 3s;
+       -moz-animation-delay: 3s;
+        -ms-animation-delay: 3s;
 }
 
 .round03{
@@ -132,8 +145,12 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     @include round-radius(440px);    
     background:#f8c039;
     color: #fff;
-    @include animation(donghua1,5s,1,linear,9s,alternate); 
+    //@include animation(donghua1,5s,1,linear,9s,alternate); 
     box-shadow:0px 0px 80px #f8c039;
+            animation-delay: 5s;
+    -webkit-animation-delay: 5s;
+       -moz-animation-delay: 5s;
+        -ms-animation-delay: 5s;
 }
 
 .round04{
@@ -141,28 +158,20 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     width:700px; height:620px;
     margin: -310px -350px 0 0;
    // @include animation(donghua2,3s,1,linear,15s,alternate); 
-   
-    animation:donghua1 8s linear 14s, donghua2 1000s linear 22s;
+            animation-duration:8s;
+    -webkit-animation-duration:8s;
+       -moz-animation-duration:8s;
+        -ms-animation-duration:8s;
+            animation-delay: 8s;
+    -webkit-animation-delay: 8s;
+       -moz-animation-delay: 8s;
+        -ms-animation-delay: 8s;          
 }
 
-.round04 .inner:after{ 
-    display: inline-block; 
-    content: "\20"; 
-    width:0px; height: 100%; 
-    vertical-align: middle;
-}
-.round04 .inner .cont{
-    width: 99%;
-    display: inline-block;    
-    vertical-align: middle;    
-    line-height: 1.2;
-}
-.round04 .inner .cont i{
-    font-size: 1em;
-}
-.round04 .inner i.d-dabai{
-    font-size:5.5em;
-}
+.round04 .inner:after{  display: inline-block;  content: "\20";   width:0px; height: 100%;  vertical-align: middle;}
+.round04 .inner .cont{  width: 99%;    display: inline-block;    vertical-align: middle;   line-height: 1.2;}
+.round04 .inner .cont i{   font-size: 1em;}
+.round04 .inner i.d-dabai{   font-size:5.5em;}
 
 .round04 .r01{position:absolute; top: 0px; left:98px; @include round-radius(172px); background: #adf04c;}
 .round04 .r02{position:absolute; top: 70px; left:50%; margin-left: -36px; @include  round-radius(132px); background: #fff668;}
@@ -171,24 +180,87 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 .round04 .r05{position:absolute; top: 160px; left:50%; margin-left: 178px; @include round-radius(210px); background: #92e6ff;}
 .round04 .r06{position:absolute; bottom: 0px; left:50%; margin-left:-162px; @include round-radius(390px); background: #ff7827; color: #fff;}
 
-
-@keyframes donghua2{
-    0%{
-        @include opacity(0);
-    }
-    1%{
-        @include opacity(100);
-    }
-    100%{
-        @include opacity(100);
-    }
+.item{  
+    position: absolute;  
+     animation:fade 3s both linear;
+-webkit-animation:fade 3s both linear;
+   -moz-animation:fade 3s both linear;
+    -ms-animation:fade 3s both linear;
+}
+.item01{top: 50%; left: 50%; margin-left: -60px; margin-top:-305px;
+             animation-delay:16s;
+    -webkit-animation-delay: 16s;
+       -moz-animation-delay: 16s;
+        -ms-animation-delay: 16s;
+}
+.item02{top: 50%; left: 50%; margin-left: -400px; margin-top:-175px;
+             animation-delay:19s;
+    -webkit-animation-delay: 19s;
+       -moz-animation-delay: 19s;
+        -ms-animation-delay: 19s;
+}
+.item03{top: 50%; left: 50%; margin-left: -230px; margin-top:-170px;
+             animation-delay:22s;
+    -webkit-animation-delay: 22s;
+       -moz-animation-delay: 22s;
+        -ms-animation-delay: 22s;
+}
+.item04{ top: 50%; right: 50%; margin-right: -355px; margin-top:-300px;
+             animation-delay:25s;
+    -webkit-animation-delay: 25s;
+       -moz-animation-delay: 25s;
+        -ms-animation-delay: 25s;
+}
+.item05{top: 50%; left: 50%; margin-left: -170px; margin-top:-190px;
+             animation-delay:28s;
+    -webkit-animation-delay: 28s;
+       -moz-animation-delay: 28s;
+        -ms-animation-delay: 28s;
 }
 
-@keyframes donghua1{
+
+.item .cont{
+    position: relative;
+    display: inline-block;
+    font-size: 3em;
+    line-height:70px;
+    height: 70px;
+    padding-right: 30px;
+    color: #fff;
+    white-space: nowrap;
+    background: #f8c039;
+    @include border-radius(6px);
+    margin-bottom: 30px;
+}
+.item .cont:before{
+    content: "\20";
+    position: absolute;
+    top: 50%; left:-65px;
+    margin-top:-8px;
+    @include round-radius(16px);
+    background:#f8c039 ;
+}
+.item .cont:after{
+    content: "\20";
+    position: absolute;
+    top:10px; left:-22px;
+//    width: 0; height: 0;    
+//  border:35px solid transparent;
+//  border-right:33px solid #f8c039;
+    width:51px; height:51px;
+    background:#f8c039;
+    transform:rotate(45deg);
+    @include border-radius(6px);
+    z-index:-1;
+}
+
+.item .cont i{font-style: normal;}
+
+@-webkit-keyframes fade{
     0%{
         @include opacity(0);
     }
-    50%{
+    30%{
         @include opacity(100);
     }
     80%{
@@ -198,6 +270,117 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
         @include opacity(0);
     }
 }
+@-moz-keyframes fade{
+    0%{
+        @include opacity(0);
+    }
+    30%{
+        @include opacity(100);
+    }
+    80%{
+        @include opacity(100);
+    }
+    100%{
+        @include opacity(0);
+    }
+}
+@-o-keyframes fade{
+    0%{
+        @include opacity(0);
+    }
+    30%{
+        @include opacity(100);
+    }
+    80%{
+        @include opacity(100);
+    }
+    100%{
+        @include opacity(0);
+    }
+}
+@keyframes fade{
+    0%{
+        @include opacity(0);
+    }
+    30%{
+        @include opacity(100);
+    }
+    80%{
+        @include opacity(100);
+    }
+    100%{
+        @include opacity(0);
+    }
+}
+
+@-webkit-keyframes fadein{
+    0%{
+        @include opacity(0);
+    }
+    100%{
+        @include opacity(100);
+    }
+}
+@-moz-keyframes fadein{
+    0%{
+        @include opacity(0);
+    }
+    100%{
+        @include opacity(100);
+    }
+}
+@-o-keyframes fadein{
+    0%{
+        @include opacity(0);
+    }
+    100%{
+        @include opacity(100);
+    }
+}
+@keyframes fadein{
+    0%{
+        @include opacity(0);
+    }
+    100%{
+        @include opacity(100);
+    }
+}
+
+@-webkit-keyframes fadeout{
+    0%{
+        //@include opacity(100);
+    }
+    100%{
+        @include opacity(0);
+    }    
+}
+@-moz-keyframes fadeout{
+    0%{
+        //@include opacity(100);
+    }
+    100%{
+        @include opacity(0);
+    }   
+}
+@-o-keyframes fadeout{
+    0%{
+       // @include opacity(100);
+    }
+    100%{
+        @include opacity(0);
+    }    
+}
+@keyframes fadeout{
+    0%{
+        @include opacity(100);
+    }
+    100%{
+        @include opacity(0);
+    }  
+}
+
+
+
 
 @include maxmin-screen(641px,768px){
    .intro p{font-size: 1.8em;}
@@ -226,6 +409,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
        transform:scale(0.5) translateX(-20%) translateY(-10%);
    }   
    .round04{transform:translateX(8%);}
+   .item{transform:translateX(15%);}
 }
 
 @include maxmin-screen(321px,360px){
