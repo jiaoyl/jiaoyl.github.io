@@ -67,7 +67,36 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 .intro{padding: 0  8.3%; padding-bottom:400px;}
 .intro p{font-size:3em; line-height:1.5; color: #fff; padding-top:0.5em;}
 
+.zhubox{width: 292px; height: 212px; position: fixed; bottom:10px; left: 50%; margin-left: -146px; text-align: center; border: 1px solid #ccc; background: #3f3f3f;
+      animation:fadein 3s both linear;
+-webkit-animation:fadein 3s both linear;
+   -moz-animation:fadein 3s both linear;
+    -ms-animation:fadein 3s both linear;
+}
+.zhubox p{font-size: 2em; color: #fff; padding:25px 0 30px;}
+.zhubox .btn-zhu{display:inline-block; width: 50%; font-size: 2em; line-height: 2; text-align: center; border-radius: 6px; color: #fff; background: #de3232;}
+.zhubox .btn-zhu span{display: inline-block;}
+
 .animation{padding: 0  8.3%; height:785px;position: relative;}
+
+.fadeout{
+         animation:fadeout 3s both linear;
+-webkit-animation:fadeout 3s both linear;
+   -moz-animation:fadeout 3s both linear;
+    -ms-animation:fadeout 3s both linear;
+}
+.fadein{
+         animation:fadein 3s both linear;
+-webkit-animation:fadein 3s both linear;
+   -moz-animation:fadein 3s both linear;
+    -ms-animation:fadein 3s both linear;
+}
+.paused{
+        animation-play-state: paused;
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -ms-animation-play-state: paused;
+}
 
 .round{  
     position: absolute; 
@@ -255,6 +284,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 }
 
 .item .cont i{font-style: normal;}
+.item03 .cont i{color: #3F3F3F;}
 
 @-webkit-keyframes fade{
     0%{
@@ -388,6 +418,8 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
        height:700px;
        transform:scale(0.8) translateX(-10%) translateY(-10%);
    }   
+   .zhubox{transform:scale(0.8) translateY(50%);}
+   .item{transform:translateX(15%);}
 }
 
 @include maxmin-screen(481px,640px){
@@ -397,37 +429,44 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
        height: 470px;
        transform:scale(0.6) translateX(-12%) translateY(0%);
    }   
+   .zhubox{transform:scale(0.6) translateY(50%);}
    .round04{transform:translateX(-10%);}
+   .item{transform:translateX(15%);}
 }
 
 @include maxmin-screen(361px,480px){
    .header{padding-top: 20px;padding-bottom:20px;}
-   .intro{padding-bottom: 100px;}
+   .intro{padding-bottom: 150px;}
    .intro p{font-size: 1.5em;}
    .animation{
        height:392px;
        transform:scale(0.5) translateX(-20%) translateY(-10%);
    }   
+   .zhubox{transform:scale(0.5) translateY(30%);}
    .round04{transform:translateX(8%);}
-   .item{transform:translateX(15%);}
+   .item{transform:translateX(20%);}
 }
 
 @include maxmin-screen(321px,360px){
    .header{padding-top: 20px;padding-bottom:0px;}
-   .intro{padding-bottom: 100px;}
+   .intro{padding-bottom: 150px;}
    .intro p{font-size: 1em;}
    .animation{
        height:350px;
        transform:scale(0.4) translateX(-12%) translateY(-10%);
-   }   
+   }  
+   .zhubox{transform:scale(0.4) translateY(50%);}
+   .item{transform:translateX(12%);} 
 }
 
 @include max-screen(320px){
    .header{padding-top: 20px;padding-bottom:0px;}
-   .intro{padding-bottom: 100px;}
+   .intro{padding-bottom: 150px;}
    .intro p{font-size: 1em;}
    .animation{
        height:280px;
        transform:scale(0.3) translateX(-12%) translateY(-10%);
    }
+   .zhubox{transform:scale(0.3) translateY(50%);}
+   .item{transform:translateX(15%);}
 }
