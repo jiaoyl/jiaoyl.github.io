@@ -67,11 +67,11 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 .intro{padding: 0  8.3%; padding-bottom:400px;}
 .intro p{font-size:3em; line-height:1.5; color: #fff; padding-top:0.5em;}
 
-.zhubox{width: 292px; height: 212px; position: fixed; bottom:10px; left: 50%; margin-left: -146px; text-align: center; border: 1px solid #ccc; background: #3f3f3f;
-      animation:fadein 3s both linear;
--webkit-animation:fadein 3s both linear;
-   -moz-animation:fadein 3s both linear;
-    -ms-animation:fadein 3s both linear;
+.zhubox{width: 288px; height: 208px; position: fixed; bottom:10px; left: 50%; margin-left: -144px; text-align: center;background: #3f3f3f url(../img/zhu_box01.png) no-repeat center center;
+      animation:show01 1s 2s both linear;
+-webkit-animation:show01 1s 2s both linear;
+   -moz-animation:show01 1s 2s both linear;
+    -ms-animation:show01 1s 2s both linear;
 }
 .zhubox p{font-size: 2em; color: #fff; padding:25px 0 30px;}
 .zhubox .btn-zhu{display:inline-block; width: 50%; font-size: 2em; line-height: 2; text-align: center; border-radius: 6px; color: #fff; background: #de3232;}
@@ -378,7 +378,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 
 @-webkit-keyframes fadeout{
     0%{
-        //@include opacity(100);
+        @include opacity(100);
     }
     100%{
         @include opacity(0);
@@ -386,7 +386,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 }
 @-moz-keyframes fadeout{
     0%{
-        //@include opacity(100);
+        @include opacity(100);
     }
     100%{
         @include opacity(0);
@@ -394,7 +394,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 }
 @-o-keyframes fadeout{
     0%{
-       // @include opacity(100);
+        @include opacity(100);
     }
     100%{
         @include opacity(0);
@@ -409,7 +409,38 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     }  
 }
 
-
+@-webkit-keyframes show01{
+    0%{
+        bottom: -208px;
+    }
+    100%{
+        bottom: 10px;
+    }    
+}
+@-moz-keyframes show01{
+    0%{
+       bottom: -208px;
+    }
+    100%{
+        bottom: 10px;
+    }    
+}
+@-o-keyframes show01{
+    0%{
+        bottom: -208px;
+    }
+    100%{
+        bottom: 10px;
+    }     
+}
+@keyframes show01{
+    0%{
+        bottom: -208px;
+    }
+    100%{
+        bottom: 10px;
+    }   
+}
 
 
 @include maxmin-screen(641px,768px){
