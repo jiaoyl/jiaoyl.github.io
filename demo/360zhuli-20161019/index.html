@@ -12,6 +12,16 @@
 					setTimeout(function(){
 						$('.round04').addClass('fadein');
 					},31000);
+					
+					$(".btn-zhu").on('click',function(){
+						$(this).parent().hide();
+						$(".phonebox").show();
+					});
+					
+					$(".anniu").on('click',function(){
+						$(this).parent().hide();
+					})
+					
 				})
     </script>
   </head>
@@ -73,6 +83,18 @@
   						<p>晒晒我的理财足迹<br>好友助力共赢iPhone 7</p>
   						<a href="javascript:" class="btn-zhu"><span>立即助力</span></a>
   				</div>
+  				
+  				<div class="phonebox">
+            <input style="display:none" type="text" id="amount" name="amount" class="amend-text">
+            <input style="display:none" type="text" id="cuuid" name="cuuid" class="amend-text">
+            <div class="phonecon">
+                <input  id="phone"  type="text" placeholder="输入手机号领红包" name="phone" class="amend-text">
+                <input id="sendxgdxsj" style="margin-left:10px;" type="button" class="btn dxdjs btn-info" value="获取验证码">
+            </div>
+            <p class="duanxtsk">短信验证码已发至<span class="yzsjh"></span>,请在验证框内填写验证码</p>
+            <input value="" placeholder="请输入验证码" type="text" id="verify_code" name="verify_code" class="amend-text">
+            <a class="anniu" id="dianjireger" href="#e#r">领 取 红 包</a>
+        </div>
   				
   		</div>
   </body>

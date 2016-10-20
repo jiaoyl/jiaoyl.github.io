@@ -526,6 +526,65 @@ body {
   -moz-animation-play-state: paused;
   -ms-animation-play-state: paused; }
 
+.phonebox {
+  display: none;
+  position: fixed;
+  top: 40%;
+  width: 90%;
+  max-width: 420;
+  padding: 0 5%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #3F3F3F; }
+
+.duanxtsk {
+  display: none; }
+
+.phonecon {
+  margin: 0 0 20px; }
+
+#phone {
+  border-radius: 0px;
+  width: 60%;
+  height: 35px;
+  margin: 0;
+  padding: 0 0 0 10px;
+  top: 0;
+  border: 1px solid #ccc; }
+
+input.dxdjs {
+  width: 30%;
+  height: 35px;
+  border-radius: 0px;
+  background: #59abff;
+  margin: 0;
+  padding: 0;
+  border: none;
+  color: #fff; }
+
+#verify_code {
+  width: 95%;
+  border-radius: 0px;
+  height: 35px;
+  margin: 0;
+  padding: 0;
+  padding: 0 0 0 10px;
+  top: 0;
+  border: 1px solid #ccc; }
+
+a.anniu {
+  width: 95%;
+  height: 35px;
+  background: #E14538;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+  color: #ffea97;
+  font-size: 18px;
+  line-height: 35px;
+  margin-top: 20px; }
+
 @-webkit-keyframes fade {
   0% {
     -webkit-opacity: 0;
