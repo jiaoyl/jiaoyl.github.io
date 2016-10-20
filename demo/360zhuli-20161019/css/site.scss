@@ -79,25 +79,6 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 
 .animation{padding: 0  8.3%; height:785px;position: relative;}
 
-.fadeout{
-         animation:fadeout 3s both linear;
--webkit-animation:fadeout 3s both linear;
-   -moz-animation:fadeout 3s both linear;
-    -ms-animation:fadeout 3s both linear;
-}
-.fadein{
-         animation:fadein 3s both linear;
--webkit-animation:fadein 3s both linear;
-   -moz-animation:fadein 3s both linear;
-    -ms-animation:fadein 3s both linear;
-}
-.paused{
-        animation-play-state: paused;
-        -webkit-animation-play-state: paused;
-        -moz-animation-play-state: paused;
-        -ms-animation-play-state: paused;
-}
-
 .round{  
     position: absolute; 
     text-align: center;
@@ -285,6 +266,26 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 
 .item .cont i{font-style: normal;}
 .item03 .cont i{color: #3F3F3F;}
+
+
+.fadeout{
+         animation:fadeout 3s both linear;
+-webkit-animation:fadeout 3s both linear;
+   -moz-animation:fadeout 3s both linear;
+    -ms-animation:fadeout 3s both linear;
+}
+.fadein{
+         animation:fadein 3s both linear;
+-webkit-animation:fadein 3s both linear;
+   -moz-animation:fadein 3s both linear;
+    -ms-animation:fadein 3s both linear;
+}
+.paused{
+        animation-play-state: paused;
+        -webkit-animation-play-state: paused;
+        -moz-animation-play-state: paused;
+        -ms-animation-play-state: paused;
+}
 
 @-webkit-keyframes fade{
     0%{
