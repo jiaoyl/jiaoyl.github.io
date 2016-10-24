@@ -83,7 +83,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 .zhubox .btn-zhu{display:inline-block; width: 50%; font-size: 2em; line-height: 2; text-align: center; border-radius: 6px; color: #fff; background: #de3232;}
 .zhubox .btn-zhu span{display: inline-block;}
 
-.animation{padding: 0  8.3%; height:785px;position: relative; background: #FF7BF7;}
+.animation{padding: 0  8.3%; height:785px;position: relative; }
 
 .round{  
     position: absolute; 
@@ -514,7 +514,7 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
 }
 
 @include maxmin-screen(481px,640px){
-   .header{padding-top: 20px;padding-bottom:20px;}
+   .header{padding-top: 20px;padding-bottom:20px;background: #FF7BF7;}
    .intro p{font-size: 1.8em;}
    .animation{
        height: 470px;
