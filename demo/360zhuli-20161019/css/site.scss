@@ -514,7 +514,7 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
 }
 
 @include maxmin-screen(481px,640px){
-   .header{padding-top: 20px;padding-bottom:20px;background: #FF7BF7;}
+   .header{padding-top: 20px;padding-bottom:20px;}
    .intro p{font-size: 1.8em;}
    .animation{
        height: 470px;
