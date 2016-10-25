@@ -218,17 +218,20 @@ a.anniu { width: 95%; height: 35px; background: #E14538; display: inline-block; 
   100% { bottom: 10px; } }
 @keyframes show01 { 0% { bottom: -208px; }
   100% { bottom: 10px; } }
-@media all and (min-width: 641px) and (max-width: 768px) { .intro p { font-size: 1.8em; }
+@media all and (min-width: 641px) and (max-width: 768px) { .header:after { content: "641px-768px"; color: #ff0000; font-size: 16px; }
+  .intro p { font-size: 1.8em; }
   .animation { height: 700px; transform: scale(0.8) translateX(-10%) translateY(-10%); -webkit-animation: scale(0.8) translateX(-10%) translateY(-10%); -moz-transform: scale(0.8) translateX(-10%) translateY(-10%); -ms-transform: scale(0.8) translateX(-10%) translateY(-10%); }
   .zhubox { transform: scale(0.8); -webkit-animation: scale(0.8); -moz-transform: scale(0.8); -ms-transform: scale(0.8); }
   .item { transform: translateX(15%); -webkit-animation: translateX(15%); -moz-transform: translateX(15%); -ms-transform: translateX(15%); } }
 @media all and (min-width: 481px) and (max-width: 640px) { .header { padding-top: 20px; padding-bottom: 20px; }
+  .header:after { content: "481px-640px"; color: #ff0000; font-size: 16px; }
   .intro p { font-size: 1.8em; }
   .animation { height: 470px; transform: scale(0.6) translateX(-12%) translateY(0%); -webkit-animation: scale(0.6) translateX(-12%) translateY(0%); -moz-transform: scale(0.6) translateX(-12%) translateY(0%); -ms-transform: scale(0.6) translateX(-12%) translateY(0%); }
   .zhubox { transform: scale(0.6) translateY(50%); -webkit-animation: scale(0.6) translateY(50%); -moz-transform: scale(0.6) translateY(50%); -ms-transform: scale(0.6) translateY(50%); }
   .round04 { transform: translateX(-10%); -webkit-animation: translateX(-10%); -moz-transform: translateX(-10%); -ms-transform: translateX(-10%); }
   .item { transform: translateX(15%); -webkit-animation: translateX(15%); -moz-transform: translateX(15%); -ms-transform: translateX(15%); } }
 @media all and (min-width: 361px) and (max-width: 480px) { .header { padding-top: 20px; padding-bottom: 20px; }
+  .header:after { content: "361px-480px"; color: #ff0000; font-size: 16px; }
   .intro { padding-bottom: 150px; }
   .intro p { font-size: 1.5em; }
   .animation { height: 392px; transform: scale(0.4) translateX(-20%) translateY(-10%); -webkit-animation: scale(0.4) translateX(-20%) translateY(-10%); -moz-transform: scale(0.4) translateX(-20%) translateY(-10%); -ms-transform: scale(0.4) translateX(-20%) translateY(-10%); }
@@ -236,8 +239,9 @@ a.anniu { width: 95%; height: 35px; background: #E14538; display: inline-block; 
   .round04 { transform: translateX(8%); -webkit-animation: translateX(8%); -moz-transform: translateX(8%); -ms-transform: translateX(8%); }
   .item { transform: translateX(15%); -webkit-animation: translateX(15%); -moz-transform: translateX(15%); -ms-transform: translateX(15%); } }
 @media all and (max-width: 360px) { .header { padding-top: 20px; padding-bottom: 0px; }
+  .header:after { content: "360px"; color: #ff0000; font-size: 16px; }
   .intro { padding-bottom: 150px; }
   .intro p { font-size: 1em; }
-  .animation { height: 280px; transform: scale(0.3) translateX(-12%) translateY(-10%); -webkit-animation: scale(0.3) translateX(-12%) translateY(-10%); -moz-transform: scale(0.3) translateX(-12%) translateY(-10%); -ms-transform: scale(0.3) translateX(-12%) translateY(-10%); }
-  .zhubox { transform: scale(0.5); -webkit-animation: scale(0.5); -moz-transform: scale(0.5); -ms-transform: scale(0.5); }
-  .item { transform: translateX(15%); -webkit-animation: translateX(15%); -moz-transform: translateX(15%); -ms-transform: translateX(15%); } }
+  .animation { height: 280px; -webkit-animation: scale(0.3) translateX(-12%) translateY(-10%); -moz-transform: scale(0.3) translateX(-12%) translateY(-10%); -ms-transform: scale(0.3) translateX(-12%) translateY(-10%); transform: scale(0.3) translateX(-12%) translateY(-10%); }
+  .zhubox { -webkit-animation: scale(0.5); -moz-transform: scale(0.5); -ms-transform: scale(0.5); transform: scale(0.5); }
+  .item { -webkit-animation: translateX(15%); -moz-transform: translateX(15%); -ms-transform: translateX(15%); transform: translateX(15%); } }
