@@ -30,23 +30,48 @@
 	var startX,startY;
 	//手指按下的处理事件
 	var startHandler = function(evt){	
+		evt.preventDefault();	
 		startX = evt.touches[0].pageX; 			
     startY = evt.touches[0].pageY;
 	};
-	//手指抬起的处理事件
-	var endHandler = function(evt){		
-		evt.preventDefault();		
+	var moveHandler=function(evt){
+		evt.preventDefault();	
 		var endX,endY;  
     endX = evt.changedTouches[0].pageX;
     endY = evt.changedTouches[0].pageY;
-    console.log(endY);
-//  var dx = endX - startX;  
-//  var dy = startY - endY;
-//  //如果滑动距离太短  
-//  if(Math.abs(dx) < 2 && Math.abs(dy) < 2) {  
-//     isHover = true;	
-//     return; 
-//  }  	        
+    var dx = endX - startX;  
+    var dy = startY - endY;
+    //如果滑动距离太短  
+    if(Math.abs(dx) < 2 && Math.abs(dy) < 2) {  
+       return; 
+    }  
+    var stop=$(document).height()-$(window).height();
+    
+    if(dy>2){
+    	//console.log('从下向上滑动');
+    	if($(document).scrollTop()<stop){
+    		var i=$(document).scrollTop();
+    		$(document).scrollTop(i+5);
+    	}
+    	
+    	
+    }else if(Math.abs(dy)>2){
+    	//console.log('从上向下滑动');
+    	if($(document).scrollTop()>0){
+    		var i=$(document).scrollTop(); 
+    		$(document).scrollTop(i-5);
+    	}
+    };
+    
+	}
+	//手指抬起的处理事件
+	var endHandler = function(evt){	
+		evt.preventDefault();	
+//		var endX,endY;  
+//  endX = evt.changedTouches[0].pageX;
+//  endY = evt.changedTouches[0].pageY;
+    
+         
 // //边界就翻页值	
 //		if(dy>20){	
 //			n++;
@@ -56,6 +81,7 @@
 		
 	};
 		document.addEventListener('touchstart', startHandler);
+		document.addEventListener('touchmove', moveHandler);
 		document.addEventListener('touchend', endHandler);
     </script>
   </head>
@@ -63,10 +89,10 @@
   		<div class="wrapper">
   				<header class="header">
   					<h1 class="logo"><a href="http://m.360dididai.com/"><img src="img/logo1.png"/></a></h1>
-  					<a  class="btn-list" href="#">查看兑奖码</a>
+  					<a  class="btn-list" href="#">静态测试页</a>
   				</header>
   				<section class="animation">
-  						<div class="item00 ">这是您的好友<span class="d-name">15936213500</span>在迪迪贷的理财足迹</div>
+  						<div class="item00 ">测试这是您的好友<span class="d-name">测试</span>在迪迪贷的理财足迹</div>
   						<div class="item01 round anima">
   								<span class="cont">加入迪迪贷<br><i class="d-tian">600</i>天</span>
   						</div>
@@ -93,7 +119,28 @@
   						<div class="item10 talk anima"></div>
   				</section>
   				<section class="intro">
-  					<p>1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>测试1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
+  					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
+  					<p>测试1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
+  					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
+  					<p>测试1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
+  					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
+  					<p>测试1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
+  					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
+  					<p>测试1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
+  					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
+  					<p>测试1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
+  					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
+  					<p>测试1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
+  					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
+  					<p>测试1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
   					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
   					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
   				</section>
@@ -101,8 +148,8 @@
   				<div class="zhubox">
   						<!--<p>晒晒我的理财足迹<br>好友助力共赢iPhone 7</p>
   						<a href="javascript:" class="btn-zhu"><span>立即助力</span></a>-->
-  						<a href="javascript:" class="btn btn-ru"><span>立即入伙</span></a>
-  						<a href="javascript:" class="btn btn-zhu"><span>喊人帮忙</span></a>
+  						<a href="javascript:" class="btn btn-ru"><span>静态测试页1</span></a>
+  						<a href="javascript:" class="btn btn-zhu"><span>静态测试页2</span></a>
   				</div>
   				
   				<div class="phonebox">
