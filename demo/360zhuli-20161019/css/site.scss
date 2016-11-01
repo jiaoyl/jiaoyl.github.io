@@ -1,68 +1,19 @@
 @import "scss/base"; 
 
-@mixin boxcenter($a:1000px){
-    width:$a;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@mixin box-sizing($a:border-box){
-    -moz-box-sizing: $a;
- -webkit-box-sizing: $a;
-         box-sizing: $a;    
-}
-@mixin border-radius($w:6px){
-    -moz-border-radius: $w;
- -webkit-border-radius: $w;
-         border-radius: $w;  
-}
-
-@mixin round-radius($w:100px){
-    width: $w; height: $w;
-    @include border-radius(50%);
-}
-
-@mixin opacity($opacity:50) {//透明        
--webkit-opacity:  $opacity / 100;
-   -moz-opacity:  $opacity / 100 ;
-        opacity: $opacity / 100;
-        filter: alpha(opacity=$opacity);
-}
-
-@mixin max-screen($res){
-  @media all and ( max-width: $res )
-  {
-    @content;
-  }
-}
-
-@mixin maxmin-screen($min,$max){
-  @media all and ( min-width: $min ) and ( max-width: $max )
-  {
-    @content;
-  }
-}
 
 
-@mixin animation($active,$time,$infinite:infinite,$delay:0,$linear:linear,$alternate:alternate) {//透明
-        animation: $active $time $infinite $delay $linear $alternate;
--webkit-animation: $active $time $infinite $delay $linear $alternate ;
- -moz-animation: $active $time $infinite $delay $linear $alternate ;
-  -ms-animation: $active $time $infinite $delay $linear $alternate ;
-}
-
-
-body{background: url(../img/zhu_bg01.jpg) repeat;}
+body{background: url(/resources/images/active/zhuli/zhu_bg01.jpg) repeat;}
 .wrapper{
     @include boxcenter(100%);
     max-width: 960px;
     @include box-sizing;
+    
 }
 
 .container{
   width:100%;
   min-height:100%;  
-  background: url(../img/zhu_bg02.png) no-repeat center bottom;
+  background: url(/resources/images/active/zhuli/zhu_bg02.png) no-repeat center bottom;
   background-size: 100% auto;
   -webkit-background-size: 100% auto;  
 }
@@ -73,17 +24,14 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 .intro{padding: 0  8.3%; padding-bottom:400px;}
 .intro p{font-size:3em; line-height:1.5; color: #fff; padding-top:0.5em;}
 
-.zhubox{width: 288px; height: 208px; position: fixed; bottom:10px; left: 50%; margin-left: -144px; text-align: center;background: #3f3f3f url(../img/zhu_box01.png) no-repeat center center;
-      animation:show01 1s 2s both linear;
--webkit-animation:show01 1s 2s both linear;
-   -moz-animation:show01 1s 2s both linear;
-    -ms-animation:show01 1s 2s both linear;
+.zhubox{width: 289px; height: 208px; position: fixed; bottom:10px; left: 50%; margin-left: -144px; text-align: center;background: #3f3f3f url(/resources/images/active/zhuli/zhu_box01.png) no-repeat center center;
+       @include animation-all(show01 1s 2s both linear);
 }
 .zhubox p{font-size: 2em; color: #fff; padding:25px 0 30px;}
-.zhubox .btn-zhu{display:inline-block; width: 50%; font-size: 2em; line-height: 2; text-align: center; border-radius: 6px; color: #fff; background: #de3232;}
-.zhubox .btn-zhu span{display: inline-block;}
+.zhubox .btn-zhu{display:inline-block; font-size: 1.8em; height: 2em; line-height: 2em; text-align: center; border-radius: 6px; color: #fff; background: #9f0f0f; position: relative;}
+.zhubox .btn-zhu span{position:relative; display:block; bottom: 5px; padding: 0 10px; background: #de3232;border-radius: 6px; }
 
-.animation{padding: 0  8.3%; height:785px;position: relative; }
+.animation{padding: 0  8.3%; height:785px;position: relative;}
 
 .round{  
     position: absolute; 
@@ -91,11 +39,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     font-size: 3em;
     line-height:1.6;
     color: #3f3f3f;
-   // @include opacity(0); 
-     animation:fade 3s both linear;
--webkit-animation:fade 3s both linear;
-   -moz-animation:fade 3s both linear;
-    -ms-animation:fade 3s both linear;
+    @include animation-all(fade 3s both linear);
 }
 
 .round:after{ 
@@ -121,11 +65,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     margin: -300px -48px 0 0;
     @include round-radius(320px);    
     background: #f8c039;
-   // @include animation(donghua1,5s,1,linear,2s,alternate);       
-            animation-delay:1.5s;
-    -webkit-animation-delay:1.5s;
-       -moz-animation-delay:1.5s;
-        -ms-animation-delay:1.5s;
+   @include animation-argument(delay,1.5s); 
 }
 .round01 .cont:before{
     content: "\20";
@@ -148,14 +88,10 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     top:50%; right:50%;
     margin:-170px -492px 0 0;
     @include round-radius(492px);    
-    background:url(../img/zhu_01.png) no-repeat center center;
+    background:url(/resources/images/active/zhuli/zhu_01.png) no-repeat center center;
     background-size: 100% 100%;
     color: #fff;
-    //@include animation(donghua1,5s,1,linear,5s,alternate); 
-            animation-delay: 3s;
-    -webkit-animation-delay: 3s;
-       -moz-animation-delay: 3s;
-        -ms-animation-delay: 3s;
+    @include animation-argument(delay,3s); 
 }
 
 .round03{
@@ -163,28 +99,16 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
     margin:-170px -126px 0 0;
     @include round-radius(440px);    
     background:#f8c039;
-    //color: #fff;
-    //@include animation(donghua1,5s,1,linear,9s,alternate); 
     box-shadow:0px 0px 80px #f8c039;
-            animation-delay: 5s;
-    -webkit-animation-delay: 5s;
-       -moz-animation-delay: 5s;
-        -ms-animation-delay: 5s;
+    @include animation-argument(delay,5s); 
 }
 
 .round04{
     top:50%; right:50%;
     width:700px; height:620px;
     margin: -310px -350px 0 0;
-   // @include animation(donghua2,3s,1,linear,15s,alternate); 
-            animation-duration:8s;
-    -webkit-animation-duration:8s;
-       -moz-animation-duration:8s;
-        -ms-animation-duration:8s;
-            animation-delay: 8s;
-    -webkit-animation-delay: 8s;
-       -moz-animation-delay: 8s;
-        -ms-animation-delay: 8s;          
+    @include animation-argument(duration,8s);              
+    @include animation-argument(delay,8s);          
 }
 
 .round04 .inner:after{  display: inline-block;  content: "\20";   width:0px; height: 100%;  vertical-align: middle;}
@@ -202,40 +126,22 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 
 .item{  
     position: absolute;  
-     animation:fade 3s both linear;
--webkit-animation:fade 3s both linear;
-   -moz-animation:fade 3s both linear;
-    -ms-animation:fade 3s both linear;
+    @include animation-all(fade 3s both linear);
 }
 .item01{top: 50%; left: 50%; margin-left: -60px; margin-top:-305px;
-             animation-delay:16s;
-    -webkit-animation-delay: 16s;
-       -moz-animation-delay: 16s;
-        -ms-animation-delay: 16s;
+        @include animation-argument(delay,16s); 
 }
 .item02{top: 50%; left: 50%; margin-left: -400px; margin-top:-175px;
-             animation-delay:19s;
-    -webkit-animation-delay: 19s;
-       -moz-animation-delay: 19s;
-        -ms-animation-delay: 19s;
+       @include animation-argument(delay,19s); 
 }
 .item03{top: 50%; left: 50%; margin-left: -230px; margin-top:-170px;
-             animation-delay:22s;
-    -webkit-animation-delay: 22s;
-       -moz-animation-delay: 22s;
-        -ms-animation-delay: 22s;
+     @include animation-argument(delay,22s); 
 }
 .item04{ top: 50%; right: 50%; margin-right: -355px; margin-top:-300px;
-             animation-delay:25s;
-    -webkit-animation-delay: 25s;
-       -moz-animation-delay: 25s;
-        -ms-animation-delay: 25s;
+        @include animation-argument(delay,25s); 
 }
 .item05{top: 50%; left: 50%; margin-left: -170px; margin-top:-190px;
-             animation-delay:28s;
-    -webkit-animation-delay: 28s;
-       -moz-animation-delay: 28s;
-        -ms-animation-delay: 28s;
+        @include animation-argument(delay,28s); 
 }
 
 
@@ -269,7 +175,7 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 //  border-right:33px solid #f8c039;
     width:51px; height:51px;
     background:#f8c039;
-    transform:rotate(45deg);
+    @include transform-all(rotate(45deg));
     @include border-radius(6px);
     z-index:-1;
 }
@@ -279,25 +185,16 @@ body{background: url(../img/zhu_bg01.jpg) repeat;}
 
 
 .fadeout{
-         animation:fadeout 3s both linear;
--webkit-animation:fadeout 3s both linear;
-   -moz-animation:fadeout 3s both linear;
-    -ms-animation:fadeout 3s both linear;
+    @include animation-all(fadeout 3s both linear);
 }
 .fadein{
-         animation:fadein 3s both linear;
--webkit-animation:fadein 3s both linear;
-   -moz-animation:fadein 3s both linear;
-    -ms-animation:fadein 3s both linear;
+    @include animation-all(fadein 3s both linear);
 }
 .paused{
-        animation-play-state: paused;
-        -webkit-animation-play-state: paused;
-        -moz-animation-play-state: paused;
-        -ms-animation-play-state: paused;
+    @include animation-argument(play-state,paused);
 }
 
-.phonebox{display:none; position: fixed; top: 40%; width: 90%; left: 5%; max-width:420;  padding: 10px 5%; @include box-sizing(); background: #3F3F3F; border: 1px solid #666;}
+.phonebox{display:none; position: fixed; top: 40%; width: 94%; left: 3%; max-width:420;  padding: 10px 5%; @include box-sizing(); background: #3F3F3F; border: 1px solid #666;}
 .duanxtsk{display: none; color: #fff; font-size: 1em; margin-bottom: 20px;}
 .phonecon{margin: 0 0 20px;}
 #phone{border-radius: 0px;width:60%; height: 35px;margin: 0;padding:0 0 0 10px;top: 0;border: 1px solid #ccc;}
@@ -320,8 +217,26 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
     text-align: right;
 }
 
+#mcover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    z-index: 20000;
+}
+#mcover img {
+    position: fixed;
+    top:100px;left:0;right:0;margin:auto;
+    width: 240px;
+    height: 300px;
+    z-index: 999;
+}
+
 .codelist{
-    padding: 0  6%; padding-bottom:50px;
+    padding: 0  3%; padding-bottom:50px;
     color: #fff; line-height: 2;
 }
 .codelist h3{
@@ -329,11 +244,10 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
     font-size: 1.2em;
 }
 
-.codelist .cont li{display: inline-block; width: 48%; font-size:1em;}
+.codelist .cont li{display: inline-block; width: 49%; font-size:12px; vertical-align: text-top; }
 .codelist .cont li:nth-child(2n){text-align: right;}
 .codelist .cont li span{color:#f08200;}
-
-@-webkit-keyframes fade{
+@include keyframes(fade){
     0%{
         @include opacity(0);
     }
@@ -347,50 +261,7 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
         @include opacity(0);
     }
 }
-@-moz-keyframes fade{
-    0%{
-        @include opacity(0);
-    }
-    30%{
-        @include opacity(100);
-    }
-    80%{
-        @include opacity(100);
-    }
-    100%{
-        @include opacity(0);
-    }
-}
-@-o-keyframes fade{
-    0%{
-        @include opacity(0);
-    }
-    30%{
-        @include opacity(100);
-    }
-    80%{
-        @include opacity(100);
-    }
-    100%{
-        @include opacity(0);
-    }
-}
-@keyframes fade{
-    0%{
-        @include opacity(0);
-    }
-    30%{
-        @include opacity(100);
-    }
-    80%{
-        @include opacity(100);
-    }
-    100%{
-        @include opacity(0);
-    }
-}
-
-@-webkit-keyframes fadein{
+@include keyframes(fadein){
     0%{
         @include opacity(0);
     }
@@ -398,32 +269,7 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
         @include opacity(100);
     }
 }
-@-moz-keyframes fadein{
-    0%{
-        @include opacity(0);
-    }
-    100%{
-        @include opacity(100);
-    }
-}
-@-o-keyframes fadein{
-    0%{
-        @include opacity(0);
-    }
-    100%{
-        @include opacity(100);
-    }
-}
-@keyframes fadein{
-    0%{
-        @include opacity(0);
-    }
-    100%{
-        @include opacity(100);
-    }
-}
-
-@-webkit-keyframes fadeout{
+@include keyframes(fadeout){
     0%{
         @include opacity(100);
     }
@@ -431,86 +277,27 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
         @include opacity(0);
     }    
 }
-@-moz-keyframes fadeout{
-    0%{
-        @include opacity(100);
-    }
-    100%{
-        @include opacity(0);
-    }   
-}
-@-o-keyframes fadeout{
-    0%{
-        @include opacity(100);
-    }
-    100%{
-        @include opacity(0);
-    }    
-}
-@keyframes fadeout{
-    0%{
-        @include opacity(100);
-    }
-    100%{
-        @include opacity(0);
-    }  
-}
-
-@-webkit-keyframes show01{
-    0%{
+@include keyframes(show01){
+   0%{
         bottom: -208px;
     }
     100%{
         bottom: 10px;
-    }    
+    }      
 }
-@-moz-keyframes show01{
-    0%{
-       bottom: -208px;
-    }
-    100%{
-        bottom: 10px;
-    }    
-}
-@-o-keyframes show01{
-    0%{
-        bottom: -208px;
-    }
-    100%{
-        bottom: 10px;
-    }     
-}
-@keyframes show01{
-    0%{
-        bottom: -208px;
-    }
-    100%{
-        bottom: 10px;
-    }   
-}
-
 
 
 @include maxmin-screen(641px,768px){
    .intro p{font-size: 1.8em;}
    .animation{
        height:700px;
-       transform:scale(0.8) translateX(-10%) translateY(-10%);
-       -webkit-transform:scale(0.8) translateX(-10%) translateY(-10%);
-       -moz-transform:scale(0.8) translateX(-10%) translateY(-10%);
-       -ms-transform:scale(0.8) translateX(-10%) translateY(-10%);
+       @include transform-all(scale(0.8) translateX(-10%) translateY(-10%));
    }       
    .zhubox{
-       transform:scale(0.8);
-       -webkit-transform:scale(0.8);
-       -moz-transform:scale(0.8);
-       -ms-transform:scale(0.8);
+       @include transform-all(scale(0.8));
    }
    .item{
-       transform:translateX(15%);
-       -webkit-transform:translateX(15%);
-       -moz-transform:translateX(15%);
-       -ms-transform:translateX(15%);
+       @include transform-all(translateX(15%));
    }
 }
 
@@ -519,85 +306,55 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
    .intro p{font-size: 1.8em;}
    .animation{
        height: 470px;
-       transform:scale(0.6) translateX(-12%) translateY(0%);
-       -webkit-transform:scale(0.6) translateX(-12%) translateY(0%);
-       -moz-transform:scale(0.6) translateX(-12%) translateY(0%);
-       -ms-transform:scale(0.6) translateX(-12%) translateY(0%);
+       @include transform-all(scale(0.6) translateX(-12%) translateY(0%));
    }   
    .zhubox{
-       transform:scale(0.6) translateY(50%);
-       -webkit-transform:scale(0.6) translateY(50%);
-       -moz-transform:scale(0.6) translateY(50%);
-       -ms-transform:scale(0.6) translateY(50%);
+       @include transform-all(scale(0.6) translateY(50%));
    }
    .round04{
-       transform:translateX(-10%);
-       -webkit-transform:translateX(-10%);
-       -moz-transform:translateX(-10%);
-       -ms-transform:translateX(-10%);
+        @include transform-all(translateX(-10%));
    }
    .item{
-       transform:translateX(15%);
-       -webkit-transform:translateX(15%);
-       -moz-transform:translateX(15%);
-       -ms-transform:translateX(15%);
+        @include transform-all(translateX(15%));
    }
 }
 
 @include maxmin-screen(361px,480px){
    .header{padding-top: 20px;padding-bottom:20px;}
-   .intro{padding-bottom: 150px;}
+   .intro{padding-bottom: 250px;}
    .intro p{font-size: 1.5em;}
    .animation{
        height:392px;
-       transform:scale(0.4) translateX(-20%) translateY(-10%);
-       -webkit-transform:scale(0.4) translateX(-20%) translateY(-10%);
-       -moz-transform:scale(0.4) translateX(-20%) translateY(-10%);
-       -ms-transform:scale(0.4) translateX(-20%) translateY(-10%);
+       @include transform-all(scale(0.4) translateX(-20%) translateY(-10%));
    }   
    .zhubox{
-       transform:scale(0.6);
-       -webkit-transform:scale(0.6);
-       -moz-transform:scale(0.6);
-       -ms-transform:scale(0.6);
+       @include transform-all(scale(0.6));
    }
    .round04{
-       transform:translateX(8%);
-       -webkit-transform:translateX(8%);
-       -moz-transform:translateX(8%);
-       -ms-transform:translateX(8%);
+       @include transform-all(translateX(8%));
    }
    .item{
-       transform:translateX(15%);
-       -webkit-transform:translateX(15%);
-       -moz-transform:translateX(15%);
-       -ms-transform:translateX(15%);
+       @include transform-all(translateX(15%));
    }
 }
 
 @include max-screen(360px){   
-   .header{padding-top: 20px;padding-bottom:0px;}
-   .intro{padding-bottom: 150px;} 
+   .header{padding-top:10px;padding-bottom:0px;}
+   .intro{padding-bottom: 200px;}
    .intro p{font-size: 1em;}
    .animation{
        height:280px;
-       transform:scale(0.3) translateX(-12%) translateY(-10%);
-       -webkit-transform:scale(0.3) translateX(-12%) translateY(-10%);
-       -moz-transform:scale(0.3) translateX(-12%) translateY(-10%);
-       -ms-transform:scale(0.3) translateX(-12%) translateY(-10%);
+       @include transform-all(scale(0.3) translateX(-12%) translateY(-10%));
    }
    .zhubox{
-       transform:scale(0.5);
-       -webkit-transform:scale(0.5);
-       -moz-transform:scale(0.5);
-       -ms-transform:scale(0.5);
+       @include transform-all(scale(0.5) translateY(15%));
    }
    .item{
-       transform:translateX(15%);
-       -webkit-transform:translateX(15%);
-       -moz-transform:translateX(15%);
-       -ms-transform:translateX(15%);
+       @include transform-all(translateX(15%));
    }
+   .codelist{padding: 0 8%;}
+   .codelist .cont li{width: 95%; }
+   .codelist .cont li:nth-child(2n){text-align: left;}
 }
 
 
