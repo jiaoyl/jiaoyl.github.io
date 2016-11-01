@@ -48,15 +48,16 @@
     var stop=$(document).height()-$(window).height();
     
     if(dy>2){
-    	//console.log('从下向上滑动');
+    	console.log('从下向上滑动');
     	if($(document).scrollTop()<stop){
     		var i=$(document).scrollTop();
     		$(document).scrollTop(i+5);
+    		console.log('ddd');
     	}
     	
     	
     }else if(Math.abs(dy)>2){
-    	//console.log('从上向下滑动');
+    	console.log('从上向下滑动');
     	if($(document).scrollTop()>0){
     		var i=$(document).scrollTop(); 
     		$(document).scrollTop(i-5);
