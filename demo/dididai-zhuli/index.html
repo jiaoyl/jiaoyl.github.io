@@ -35,10 +35,11 @@
 	};
 	//手指抬起的处理事件
 	var endHandler = function(evt){		
-		evt.preventDefault();
-//		var endX,endY;  
-//  endX = evt.changedTouches[0].pageX;
-//  endY = evt.changedTouches[0].pageY; 
+		evt.preventDefault();		
+		var endX,endY;  
+    endX = evt.changedTouches[0].pageX;
+    endY = evt.changedTouches[0].pageY;
+    console.log(endY);
 //  var dx = endX - startX;  
 //  var dy = startY - endY;
 //  //如果滑动距离太短  
