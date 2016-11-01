@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>迪迪贷助力活动</title>
+    <link href="css/site.css?11111" rel="stylesheet">
+    <script src="js/jquery-2.1.0.js"></script>
+    <script>
+				$(function(){
+					setTimeout(function(){
+			$('.item04').addClass('fadeout');
+		},15000);
+		setTimeout(function(){
+			$('.item04').addClass('fadein');
+		},30000);
+					
+					$(".btn-zhu").on('click',function(){
+						$(this).parent().hide();
+						$(".phonebox").show();
+					});
+					
+					$(".anniu").on('click',function(){
+						$(this).parent().hide();
+					})
+					
+				})
+				
+	var startX,startY;
+	//手指按下的处理事件
+	var startHandler = function(evt){	
+		startX = evt.touches[0].pageX; 			
+    startY = evt.touches[0].pageY;
+	};
+	//手指抬起的处理事件
+	var endHandler = function(evt){		
+		evt.preventDefault();
+//		var endX,endY;  
+//  endX = evt.changedTouches[0].pageX;
+//  endY = evt.changedTouches[0].pageY; 
+//  var dx = endX - startX;  
+//  var dy = startY - endY;
+//  //如果滑动距离太短  
+//  if(Math.abs(dx) < 2 && Math.abs(dy) < 2) {  
+//     isHover = true;	
+//     return; 
+//  }  	        
+// //边界就翻页值	
+//		if(dy>20){	
+//			n++;
+//			geCodelist02(0,n,30);
+//			geCodelist02(1,n,30);	
+//		}
+		
+	};
+		document.addEventListener('touchstart', startHandler);
+		document.addEventListener('touchend', endHandler);
+    </script>
+  </head>
+  <body>	
+  		<div class="wrapper">
+  				<header class="header">
+  					<h1 class="logo"><a href="http://m.360dididai.com/"><img src="img/logo1.png"/></a></h1>
+  					<a  class="btn-list" href="#">查看兑奖码</a>
+  				</header>
+  				<section class="animation">
+  						<div class="item00 ">这是您的好友<span class="d-name">15936213500</span>在迪迪贷的理财足迹</div>
+  						<div class="item01 round anima">
+  								<span class="cont">加入迪迪贷<br><i class="d-tian">600</i>天</span>
+  						</div>
+  						<div class="item02 round anima">
+						      <span class="cont">累计受益<br><i class="d-allshou">600.88</i>元</span>
+  						</div>
+  						<div class="item03 round anima">
+  							   <span class="cont">投标次数<br><i class="d-allbiao">600</i>次</span>
+  						</div>
+  						<div class="item04">
+  								<div class="r01 round"><span class="cont">喜欢<br>车分期</span></div>
+  								<div class="r02 round"><span class="cont">理财<br>达人</span></div>
+  								<div class="r03 round"><span class="cont">土豪</span></div>
+  								<div class="r04 round"><span class="cont"><i class="d-ftoutime">2014/11/11</i><br>第一次投资</span></div>
+  								<div class="r05 round"><span class="cont"><i class="d-fshoutime">2014/11/11</i><br>第一次回款</span></div>
+  								<div class="r06 round"><span class="cont">打败<br><i class="d-dabai">90</i>%的人</span></div>
+  						</div>
+  						
+  						<div class="item05 talk anima"></div>
+  						<div class="item06 talk anima"></div>
+  						<div class="item07 talk anima"></div>
+  						<div class="item08 talk anima"></div>
+  						<div class="item09 talk anima"></div>
+  						<div class="item10 talk anima"></div>
+  				</section>
+  				<section class="intro">
+  					<p>1.将自己的理财足迹分享至朋友圈，等待好友助力</p>
+  					<p>2.每帮一位好友助力或被好友助力一次，均可获得一个<span>iPhone 7</span>兑奖码。</p>
+  					<p>3.11月10日彩票排列五开奖号码即为中奖号码。中奖即得<span>iPhone 7</span>！</p>
+  				</section>
+  				
+  				<div class="zhubox">
+  						<!--<p>晒晒我的理财足迹<br>好友助力共赢iPhone 7</p>
+  						<a href="javascript:" class="btn-zhu"><span>立即助力</span></a>-->
+  						<a href="javascript:" class="btn btn-ru"><span>立即入伙</span></a>
+  						<a href="javascript:" class="btn btn-zhu"><span>喊人帮忙</span></a>
+  				</div>
+  				
+  				<div class="phonebox">
+            <input style="display:none" type="text" id="amount" name="amount" class="amend-text">
+            <input style="display:none" type="text" id="cuuid" name="cuuid" class="amend-text">
+            <div class="phonecon">
+                <input  id="phone"  type="text" placeholder="输入手机号领红包" name="phone" class="amend-text">
+                <input id="sendxgdxsj" style="margin-left:10px;" type="button" class="btn dxdjs btn-info" value="获取验证码">
+            </div>
+            <p class="duanxtsk">短信验证码已发至<span class="yzsjh"></span>,请在验证框内填写验证码</p>
+            <input value="" placeholder="请输入验证码" type="text" id="verify_code" name="verify_code" class="amend-text">
+            <a class="anniu" id="dianjireger" href="#e#r">领 取 红 包</a>
+        </div>
+  				
+  		</div>
+  </body>
+</html>

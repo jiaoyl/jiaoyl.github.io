@@ -1,0 +1,21 @@
+#twoyear { padding-top: 574px; background: url(../images/twoyear01.jpg) no-repeat center top; }
+
+#twoyear .huodong-con { height: 1191px; background: url(../images/twoyear02.jpg) no-repeat center top; }
+
+#twoyear .huodong-bottom { height: 235px; background: url(../images/twoyear03.jpg) no-repeat center top; }
+
+#twoyear .wrapper { width: 880px; margin: 0 auto; padding: 35px 60px 0; }
+
+#twoyear .huodong-con p { color: #520588; font-size: 16px; line-height: 30px; padding-top: 35px; }
+
+#twoyear .huodong-con p span { color: #e61773; font-weight: bold; }
+
+#twoyear .huodong-con .center { text-align: center; padding-top: 38px; }
+
+#fixed_twoyear { width: 100%; }
+
+#fixed_twoyear .fixed_twoyear_float { position: fixed; left: -100%; bottom: 0%; width: 150px; height: 200px; }
+
+#fixed_twoyear .fixed_twoyear_bottom { width: 100%; height: 150px; position: fixed; bottom: 0; left: 0; background: url(../images/fixed_twoyear02.png) no-repeat bottom center; z-index: 100; }
+
+#fixed_twoyear .close { position: absolute; opacity: 1; bottom: 80px; right: 50%; margin-right: -500px; width: 30px; height: 30px; background: url(../images/fixed_twoyear03.png) no-repeat; z-index: 101; }
