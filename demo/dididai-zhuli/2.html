@@ -8,7 +8,10 @@
     <link href="css/site.css?11111" rel="stylesheet">
     <script src="js/jquery-2.1.0.js"></script>
     <script>
-				$(function(){
+    
+    alert(window.innerWidth);
+    alert(window.devicePixelRatio);
+		$(function(){
 					setTimeout(function(){
 			$('.item04').addClass('fadeout');
 		},15000);
@@ -51,7 +54,7 @@
     	console.log('从下向上滑动');
     	if($(document).scrollTop()<stop){
     		var i=$(document).scrollTop();
-    		$(document).scrollTop(i+10);
+    		$(document).scrollTop(i+15);
     		console.log('ddd');
     	}
     	
@@ -60,7 +63,7 @@
     	console.log('从上向下滑动');
     	if($(document).scrollTop()>0){
     		var i=$(document).scrollTop(); 
-    		$(document).scrollTop(i-10);
+    		$(document).scrollTop(i-15);
     	}
     };
     
