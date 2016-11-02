@@ -9,8 +9,12 @@
     <script src="js/jquery-2.1.0.js"></script>
     <script>
     
-    alert("屏幕宽度："+window.innerWidth+"<br>网页可视高度："+window.clientHeight+"<br>屏幕像素比："+window.devicePixelRatio+"<br>网页实际长度："+window.scrollHeight+"<br>屏幕分辨率的宽："+window.screen.weight+"<br>屏幕分辨率的高度："+window.screen.height);
+   
 		$(function(){
+			var html="<p style='color: #fff;'>屏幕宽度："+window.innerWidth+"<br>屏幕高度："+window.innerHeight+"<br>屏幕像素比："+window.devicePixelRatio+"<br>网页实际长度："+$(document).height();
+			
+			$('.phonebox').append(html);
+			
 					setTimeout(function(){
 			$('.item04').addClass('fadeout');
 		},15000);
@@ -55,6 +59,7 @@
     		var i=$(document).scrollTop();
     		$(document).scrollTop(i+15);
     		console.log('ddd');
+    		$('.phonebox').append("<i style='color: #FFCB20;'>"+$(document).scrollTop()+",</i>");
     	}
     	
     	
