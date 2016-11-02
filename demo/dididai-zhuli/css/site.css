@@ -904,16 +904,28 @@ a.anniu {
     transform: scale(0.6);
     -webkit-transform: scale(0.6);
     -moz-transform: scale(0.6);
-    -ms-transform: scale(0.6); } }
+    -ms-transform: scale(0.6); }
+
+  .codelist {
+    padding: 0 8.3%; }
+
+  .codelist h3 {
+    font-size: 1.2em; }
+
+  .codeintro p {
+    font-size: 1em; }
+
+  .codeintro h3 {
+    font-size: 1.2em; } }
 @media all and (min-width: 421px) and (max-width: 640px) {
   .header {
     padding-top: 20px; }
 
   .btn-list {
-    font-size: 1.8em; }
+    font-size: 1.5em; }
 
   .intro p {
-    font-size: 1.8em; }
+    font-size: 1.5em; }
 
   .animation {
     height: 549.5px;
@@ -923,32 +935,56 @@ a.anniu {
     -ms-transform: scale(0.6); }
 
   .zhubox .btn {
-    font-size: 1.8em; }
+    font-size: 1.5em; }
 
   .item05 {
-    margin-left: -100px; } }
+    margin-left: -100px; }
+
+  .codelist {
+    padding: 0 8.3%; }
+
+  .codelist h3 {
+    font-size: 1.2em; }
+
+  .codeintro {
+    padding: 0 3%; }
+
+  .codeintro p {
+    font-size: 1em; }
+
+  .codeintro h3 {
+    font-size: 1.2em; } }
 @media all and (min-width: 376px) and (max-width: 420px) {
   .header {
     padding-top: 20px; }
 
   .btn-list {
-    font-size: 1.5em; }
+    font-size: 1.2em; }
 
   .intro p {
-    font-size: 1.5em; }
+    font-size: 1.2em; }
 
   .animation {
-    height: 392.5px;
+    height: 360px;
     transform: scale(0.45);
     -webkit-transform: scale(0.45);
     -moz-transform: scale(0.45);
     -ms-transform: scale(0.45); }
 
   .zhubox .btn {
-    font-size: 1.5em; }
+    font-size: 1.2em; }
 
   .item05 {
-    margin-left: -130px; } }
+    margin-left: -130px; }
+
+  .codeintro {
+    padding: 0 3%; }
+
+  .codeintro p {
+    font-size: 1em; }
+
+  .codeintro h3 {
+    font-size: 1.2em; } }
 @media all and (min-width: 361px) and (max-width: 375px) {
   .header {
     padding-top: 18px; }
@@ -960,26 +996,35 @@ a.anniu {
     font-size: 1em; }
 
   .animation {
-    height: 392.5px;
-    transform: scale(0.3);
-    -webkit-transform: scale(0.3);
-    -moz-transform: scale(0.3);
-    -ms-transform: scale(0.3); }
+    height: 350px;
+    transform: scale(0.4);
+    -webkit-transform: scale(0.4);
+    -moz-transform: scale(0.4);
+    -ms-transform: scale(0.4); }
 
   .item00 {
     font-size: 6em; }
+
+  .zhubox {
+    padding-top: 10px; }
 
   .zhubox .btn {
     font-size: 1em; }
 
   .codelist {
-    padding: 0 8%; }
+    padding: 0 8.3%; }
 
   .codelist .cont li {
     width: 95%; }
 
   .codelist .cont li:nth-child(2n) {
-    text-align: left; } }
+    text-align: left; }
+
+  .codeintro p {
+    font-size: 1em; }
+
+  .codeintro h3 {
+    font-size: 1.2em; } }
 @media all and (max-width: 360px) {
   .header {
     padding-top: 13px; }
@@ -991,20 +1036,27 @@ a.anniu {
     font-size: 1em; }
 
   .animation {
-    height: 274.75px;
+    height: 260px;
     transform: scale(0.3);
     -webkit-transform: scale(0.3);
     -moz-transform: scale(0.3);
     -ms-transform: scale(0.3); }
 
   .zhubox .btn {
-    font-size: 1em; }
+    font-size: 1em;
+    line-height: 2.5; }
 
   .codelist {
-    padding: 0 8%; }
+    padding: 0 8.3%; }
 
   .codelist .cont li {
     width: 95%; }
 
   .codelist .cont li:nth-child(2n) {
-    text-align: left; } }
+    text-align: left; }
+
+  .codeintro p {
+    font-size: 1em; }
+
+  .codeintro h3 {
+    font-size: 1.2em; } }

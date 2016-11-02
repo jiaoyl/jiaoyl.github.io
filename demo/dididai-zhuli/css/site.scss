@@ -338,37 +338,53 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
        @include transform-all(scale(0.6));
    }
    
+   .codelist{padding: 0 8.3%;}
+   .codelist h3{font-size: 1.2em;}
+   //.codeintro{padding:0 3%;}   
+   .codeintro p{font-size: 1em;}
+   .codeintro h3{font-size: 1.2em; } 
+   
 }
 
 @include maxmin-screen(421px,640px){
    .header{padding-top:20px;}
-   .btn-list{font-size: 1.8em;}
-   .intro p{font-size: 1.8em;}
+   .btn-list{font-size: 1.5em;}
+   .intro p{font-size: 1.5em;}
    
    .animation{
        height: 785px*0.7;
        @include transform-all(scale(0.6));
    }
    //.item00{font-size: 3em;}
-   .zhubox .btn{font-size: 1.8em;}
+   .zhubox .btn{font-size: 1.5em;}
    .item05{margin-left: -100px;}
+   
+   .codelist{padding: 0 8.3%;}
+   .codelist h3{font-size: 1.2em;}
+   .codeintro{padding:0 3%;}   
+   .codeintro p{font-size: 1em;}
+   .codeintro h3{font-size: 1.2em; } 
    
 
 }
 
 @include maxmin-screen(376px,420px){
    .header{padding-top:20px;}
-   .btn-list{font-size: 1.5em;}
-   .intro p{font-size: 1.5em;}
+   .btn-list{font-size: 1.2em;}
+   .intro p{font-size: 1.2em;}
    
    .animation{
-       height: 785px*0.5;
+       height:360px;
        @include transform-all(scale(0.45));
    }
    //.item00{font-size: 3em;}
-   .zhubox .btn{font-size: 1.5em;}
+   .zhubox .btn{font-size: 1.2em;}
    .item05{margin-left: -130px;}
-        
+   
+   .codeintro{padding:0 3%;}   
+   .codeintro p{font-size: 1em;}
+   .codeintro h3{font-size: 1.2em; } 
+  
 }
 
 @include maxmin-screen(361px,375px){
@@ -377,16 +393,20 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
    .intro p{font-size: 1em;}
    
    .animation{
-       height: 785px*0.5;
-       @include transform-all(scale(0.3));
+       height:350px; 
+       @include transform-all(scale(0.4));
    }
    .item00{font-size: 6em;}
+   .zhubox{padding-top: 10px;}
    .zhubox .btn{font-size: 1em;}
    
    
-   .codelist{padding: 0 8%;}
+   .codelist{padding: 0 8.3%;}
    .codelist .cont li{width: 95%; }
    .codelist .cont li:nth-child(2n){text-align: left;}
+    
+   .codeintro p{font-size: 1em;}
+   .codeintro h3{font-size: 1.2em; } 
 }
 @include max-screen(360px){   
    .header{padding-top:13px;}
@@ -394,16 +414,20 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
    .intro p{font-size: 1em;}
    
    .animation{
-       height: 785px*0.35;
+       height: 260px;
        @include transform-all(scale(0.3));
    }
    //.item00{font-size: 3em;}
-   .zhubox .btn{font-size: 1em;}
+   //.zhubox{padding:30px 0 0 0;}
+   .zhubox .btn{font-size: 1em; line-height: 2.5;}
    
    
-   .codelist{padding: 0 8%;}
+   .codelist{padding: 0 8.3%;}
    .codelist .cont li{width: 95%; }
-   .codelist .cont li:nth-child(2n){text-align: left;}
+   .codelist .cont li:nth-child(2n){text-align: left;}   
+    
+   .codeintro p{font-size: 1em;}
+   .codeintro h3{font-size: 1.2em; } 
 }
 
 
