@@ -1042,6 +1042,9 @@ a.anniu {
     -moz-transform: scale(0.3);
     -ms-transform: scale(0.3); }
 
+  .zhubox {
+    padding-top: 10px; }
+
   .zhubox .btn {
     font-size: 1em;
     line-height: 2.5; }
