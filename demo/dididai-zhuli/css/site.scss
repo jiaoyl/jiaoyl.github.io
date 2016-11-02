@@ -411,6 +411,7 @@ font-size: 18px;line-height: 35px;margin-top: 20px;}
 @include max-screen(360px){   
    .header{padding-top:13px;}
    .btn-list{font-size: 1em;}
+   .intro{padding: 0 8%;}
    .intro p{font-size: 1em;}
    
    .animation{
