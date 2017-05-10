@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://www.jq22.com/demo/jquery-upload20151217/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta name="apple-mobile-web-app-capable" content="yes">	
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<script type="text/javascript">
+	if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+		var version = parseFloat(RegExp.$1);
+		if(version>2.3){
+			var phoneScale = parseInt(window.screen.width)/640;
+			document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+		}else{
+			document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+		}
+	}else{
+		document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+	}
+	</script><meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">
+	<title></title>
+	<link rel="stylesheet" href="./jquery-upload20151217_files/animate.css">
+	<link rel="stylesheet" href="./jquery-upload20151217_files/style.css">
+</head>
+<body>
+  <form name="form" action="" method="POST" enctype="multipart/form-data">
+	<div class="wrap">
+		<div class="album-old">
+			<div class="upload-btn btn-old"><input type="file" name="" id=""></div>
+			<div class="upload-img "></div>	
+		</div>
+		<div class="album-new">
+			<div class="upload-btn btn-new"><input type="file" name="" id=""></div>
+			<div class="upload-img "></div>
+		</div>
+		<div class="wan"></div>
+		<div class="textarea">
+			<textarea placeholder="请填写您和您闺蜜的故事，字数不超过20字"></textarea>
+		</div>
+		<div class="submit"></div>
+	</div>
+	</form>
+	<script type="text/javascript" src="./jquery-upload20151217_files/zepto.min.js"></script>
+	<script type="text/javascript" src="./jquery-upload20151217_files/iscroll-zoom.js"></script>
+	<script type="text/javascript" src="./jquery-upload20151217_files/script.js"></script>
+
+
+</body></html>

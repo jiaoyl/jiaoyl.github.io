@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title></title>
+    <link href="css/site.css?11111" rel="stylesheet">
+    <script src="../../lib/jquery-2.1.0.js"></script>
+    
+  </head>
+  <body>	
+  	<div class="wrapper">
+	  	<h3>模拟input点击事件 ,修改css, 覆盖input[file]使用</h3>
+	  	<br>
+	  	<a href="#" id="fileSelect">点击上传图片</a>
+	    <input type="file" id="input"  multiple accept="image/*">
+	    <br><br><br>
+	    <script>
+		    $(function(){
+		    	var inputElement = $("#input")[0],
+		    		fileSelect = $("#fileSelect")[0];
+		    	
+		    	fileSelect.addEventListener('click',function(e){	 
+		    		if(inputElement){
+		    			inputElement.click();//模拟input点击事件
+		    		}
+		    		e.preventDefault();
+		    		
+		    	},false);
+		    	
+		    	
+		    	if(inputElement.addEventListener){
+		    		inputElement.addEventListener("change", handleFiles(this.files), false);
+		    	}else if(inputElement.attachEvent){
+		    		inputElement.attachEvent("onchange", handleFiles(this.files), false);
+		    	}
+		    	
+	//	    	$('#input').change(function(){
+	//	    		var selectedfile = $('#input').get(0).files[0];
+	//	    		console.log(selectedfile)
+	//	    	})
+		    })    	
+		    
+//		    function handleFiles() {
+//				  var fileList = this.files; 
+//				  var option={
+//				  	  fileLength:fileList.length,
+//				  	  fileitem:fileList[0],
+//				  	  filesize:fileList[0].size,
+//				  	  filename:fileList[0].name
+//				  }
+//				  console.log(fileList)
+//				  console.log(option.fileLength)
+//				  console.log(option.fileitem)
+//				  console.log(option.filesize)
+//				  console.log(option.filename)
+//				}
+	    </script>
+	    
+	    <h3>拖拽</h3>
+	    
+	    <div id="dropbox" style="max-width: 500px;min-height: 200px; padding: 5px; border: 1px solid #00A2D4;">
+	    	
+	    </div>
+	    
+	    <script>
+	    function handleFiles(files) {
+	    		
+				  for (var i = 0; i < files.length; i++) {
+				    var file = files[i];
+				    var imageType = /^image\//;
+				    
+				    if ( !imageType.test(file.type) ) {
+				      continue;
+				    }
+				    
+				    var img = document.createElement("img");
+				    img.classList.add("obj");
+				    img.file = file;
+				    // 假设 "preview" 是将要展示图片的 div
+				    var preview = $("#dropbox");
+				    preview.appendChild(img);
+				    
+				    var reader = new FileReader();
+				    
+				    reader.onload = (function(aImg) { 
+				      return function(e) { 
+				        aImg.src = e.target.result; 
+				      }; 
+				    })(img);
+				    reader.readAsDataURL(file);
+				  }
+				}
+	    </script>
+  		</div>
+  </body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>猜词语</title>
+    <link href="css/site.css?11111" rel="stylesheet">
+    <script src="js/jquery-2.1.0.js"></script>
+    <script>
+    		var team01=['鸡犬不宁','鸡飞狗跳','三长二短','一分为二','虎头蛇尾','纸上谈兵','张牙舞爪','金鸡独立','嚎嚎大哭','抓耳挠腮','挥汗如雨','手舞足蹈','眉飞色舞','五体投地','心口如一','牛头马面'];
+    		var team02=['狐狸','老虎','大象','海豚','恐龙','老鼠蟑螂','蝴蝶','北极熊','熊猫','长颈鹿','蝎子','孔雀','猩猩大灰狼','猴子','鸭子','金鱼','蜈蚣','狮子','小鸡','老鹰','白马','螃蟹'];  
+    		var team03=['22222','2鸡飞狗跳','三3长二短','一分为二','虎头蛇尾','纸上谈兵','张牙舞爪','金鸡独立','嚎嚎大哭','抓耳挠腮','挥汗如雨','手舞足蹈','眉飞色舞','五体投地','心口如一','牛头马面'];     		
+    		  var et=120;
+			  var t;
+			  var ullistleng;
+				$(function(){
+					$(".lay01 .item").on('click',function(){
+						 var aa= $(this).data('team');						 
+						 switch(aa){
+						 	case 1:
+						 	return appendHtml(team01); 	
+						 	break;
+						 	case 2:
+							return appendHtml(team02); 	
+						 	break;
+						 	case 3:
+							return appendHtml(team03); 	
+						 	break;
+						 	case 4:
+							return appendHtml(team04); 	
+						 	break;
+						 }
+						 
+					});
+					
+						
+					$('.btn-begin').on('click',function(){
+							$(this).hide();
+							$('#time,.btn-stop,.ullist,.ullist-btn').show();		
+							timedCount();
+							
+												
+					})
+					$('.btn-stop').on('click',function(){
+							clearTimeout(t);
+							$(this).hide();
+							$('.btn-begin').show();						
+												
+					})
+					
+					function appendHtml(e){
+						var ulhtml="";
+						$(".lay02 .ullist").html(ulhtml);
+						console.log(e);
+						ullistleng=e.length;
+						for(var i=0;i<e.length;i++){
+					 		 ulhtml +="<li class=\"item\">" +e[i]+"</li>";
+					 	}
+					 	$(".lay02 .ullist").append(ulhtml);
+					 	$(".lay01").hide();
+					 	$(".lay02").show();
+					}
+
+
+					$('.btn-next').on('click',function(){
+						var index=$(this).data('page')+1;	
+						$(".lay02 .ullist li").eq(index).show().siblings().hide();	
+						$(this).data('page',index);
+						if(ullistleng==index){
+							clearTimeout(t);
+							$('.btn-next').css({"background":"#ccc"});
+							$('.btn-go').show();	
+						}
+
+					})
+
+					$('.btn-go').on('click',function(){
+						window.location.reload();
+						clearTimeout(t);
+						et=120;
+					})
+								
+					
+				})
+				
+				function timedCount()
+				{
+					if(et!=0){
+						et--;
+						$('#time span').html(et)
+						t=setTimeout("timedCount()",1000);
+					}else if(et==0){
+						$('.btn-next').hide();
+						$('.btn-ss').show();
+						$('.btn-go').show('30000');
+					}					
+
+				}
+				
+				
+    </script>
+  </head>
+  <body>	
+  	<div class="lay01">
+  				<h2>猜词</h2>
+  				<ul class="cont">
+  					<li class="item" data-team = "1">第一组</li>
+  					<li class="item" data-team = "2">第2组</li>
+  					<li class="item" data-team = "3">第3组</li>
+  					<li class="item" data-team = "4">第4组</li>
+  					<li class="item" data-team = "5">第5组</li>
+  					<li class="item" data-team = "6">第6组</li>
+  					<li class="item" data-team = "7">第7组</li>
+  					<li class="item" data-team = "8">第8组</li>
+  					<li class="item" data-team = "9">第9组</li>
+  				</ul>
+  	</div>
+  	<div class="lay02" style="display: none;">
+  		<div class="wrapper">
+  				<div class="cont">
+
+  					<div class="tct">
+  						<span id="time"  style="display: none;">剩余：<span>120</span>s  </span>
+  						<span class="btn btn-stop" style="display: none;">暂停</span> 
+  						<span class="btn btn-begin">开始</span>
+  					</div>
+  					<ul class="ullist" style="display: none;">
+  						
+  					</ul>	
+  					<div class="ullist-btn tct" style="display: none;">
+  						<span class="btn btn-next" data-page="0">下一个</span>  
+  						<span class="btn btn-ss" style="display: none;">时间到！</span>
+  						<span class="btn btn-go"  style="display: none;">首页</span>
+  					</div>			
+  				</div>
+  		</div>
+  	</div>
+  </body>
+</html>
