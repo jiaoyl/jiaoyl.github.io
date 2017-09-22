@@ -131,7 +131,7 @@ img { max-width: 100%; max-height: 100%; }
 
 .section08 { background: url(../img/section08_bg.jpg); }
 .section08 .container { height: 448px; }
-.section08 .container .tit { padding-top: 140px; font-size: 1.75rem; color: #000000; text-align: center; }
+.section08 .container .tit { padding-top: 140px; font-size: 3rem; color: #000000; text-align: center; }
 
 .animation01 { -webkit-transition: opacity 0.8s, -webkit-transform 0.8s; transition: opacity 0.8s, transform 0.8s; opacity: 0; filter: alpha(opacity=0) \9; -webkit-transform: translateY(50px); -ms-transform: translateY(50px); transform: translateY(50px); }
 
