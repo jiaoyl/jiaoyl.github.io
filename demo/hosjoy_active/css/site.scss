@@ -562,6 +562,15 @@ img{max-width: 100%; max-height: 100%;}
     transform: translateY(0);
 }
 
+
+	.section-sfq{
+			.boxlist{
+				li{
+					float: left;
+				}
+			}
+	}
+
 //公共底部
 //.dibu{width:100%; min-width: 1400px; padding:20px 0; background:url(../img/A4_14.jpg) repeat-y center center;}
 //.db_navcontent{max-width:1000px;margin:0 auto;}
@@ -1034,6 +1043,7 @@ img{border:none}
 		}
 
 	}
+
 	//公共底部
 	.dibu{width:100%; min-width:270px; padding:20px 0; background:url(../img/A4_14.jpg) repeat-y center center;}
 	.db_navcontent{max-width:1000px;margin:0 auto;}

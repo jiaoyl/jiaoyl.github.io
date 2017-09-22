@@ -23,13 +23,37 @@ $(function () {
                     _cont.eq(i).show().siblings(f).hide();
                 });
             });
+        },
+        shoufq: function (o) {//手风琴效果
+            o = $.extend({
+                aniBeforeWidth: '0',
+                aniAfterWidth: '0'
+            },
+            o);
+            var _this = this;
+
+            var aBW = o.aniBeforeWidth;
+            var aAW = o.aniAfterWidth;
+            var v = o.aniStyle;
+            return _this.each(function () {
+                $(this).mouseover(function () {
+                    $(this).addClass("hover").stop().animate({
+                        width: aAW
+                    },
+                    300).siblings().removeClass("hover").stop().animate({
+                        width: aBW
+                    },
+                    300);
+                });
+            });
         }
+
 
     });
 
     $('.boxlist').jtabs(".boxlist_hd li", ".boxlist_con");
 	Carousel.init($('.carousel'));
-
+	 $('.section-sfq li').shoufq({ aniBeforeWidth: '30%', aniAfterWidth: '40%' });
 
 
 

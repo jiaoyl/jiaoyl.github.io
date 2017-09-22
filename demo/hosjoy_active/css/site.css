@@ -137,6 +137,8 @@ img { max-width: 100%; max-height: 100%; }
 
 .jsshow .animation01 { opacity: 1; filter: alpha(opacity=100) \9; -webkit-transform: translateY(0); -ms-transform: translateY(0); transform: translateY(0); }
 
+.section-sfq .boxlist li { float: left; }
+
 .dibu { width: 100%; min-width: 1400px; padding: 20px 0; }
 
 .db_navcontent { max-width: 1000px; margin: 0 auto; }
