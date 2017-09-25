@@ -52,7 +52,7 @@ $(function () {
 
     $('.boxlist').jtabs(".boxlist_hd li", ".boxlist_con");
 	Carousel.init($('.carousel'));
-	$('.section09 ul li').shoufq({ aniBeforeWidth: '7%', aniAfterWidth: '45%' });
+//	$('.section09 ul li').shoufq({ aniBeforeWidth: '7%', aniAfterWidth: '45%' });
 
 	$('.banner').addClass('jsshow');
 	var winWidth=$(window).width();
@@ -66,12 +66,9 @@ $(function () {
 	        	oftop05=$('.section05').offset().top,
 	        	oftop06=$('.section06').offset().top,
 	        	oftop07=$('.section07').offset().top,
-	        	oftop08=$('.section08').offset().top,
-	        	oftophead=$('.section-head').offset().top;
+	        	oftop08=$('.section08').offset().top;
 			//console.log(e);
-				if(e>(oftophead-250)&&e<(oftophead+800)){
-					$('.section-head').addClass('jsshow');
-				}else if(e>(oftop01-250)&&e<(oftop01+800)){
+				if(e>(oftop01-250)&&e<(oftop01+800)){
 					$('.section01').addClass('jsshow');
 				}else if(e>(oftop02-250)&&e<(oftop02+800)){
 					$('.section02').addClass('jsshow');
