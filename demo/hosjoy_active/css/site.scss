@@ -1185,14 +1185,14 @@ input[type="radio"] {
 				max-width:70%;
 			}
 			.b-con{
-				font-size:0.875rem;
+				font-size:0.75rem;
 			}
 		}
 	}
 
 	.section01{
 		.boxlist{
-			width: 768px;
+			width: 680px;
 			padding: 0 3rem;
 			@include transform-all(scale(0.5) translate(-50%,0));
 			li{
@@ -1241,7 +1241,7 @@ input[type="radio"] {
 			.boxlist_con {
 				padding:3rem 1rem;
 				li{
-					height:450px;
+					height:500px;
 					h3{
 						font-size:1rem;
 					}

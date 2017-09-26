@@ -298,8 +298,8 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .banner .boxlist li { font-size: 0.75rem; }
   .section .box { max-width: 90%; padding-top: 15%; }
   .section .box .b-tit { margin-bottom: 2rem; max-width: 70%; }
-  .section .box .b-con { font-size: 0.875rem; }
-  .section01 .boxlist { width: 768px; padding: 0 3rem; transform: scale(0.5) translate(-50%, 0); -webkit-transform: scale(0.5) translate(-50%, 0); -moz-transform: scale(0.5) translate(-50%, 0); -ms-transform: scale(0.5) translate(-50%, 0); }
+  .section .box .b-con { font-size: 0.75rem; }
+  .section01 .boxlist { width: 680px; padding: 0 3rem; transform: scale(0.5) translate(-50%, 0); -webkit-transform: scale(0.5) translate(-50%, 0); -moz-transform: scale(0.5) translate(-50%, 0); -ms-transform: scale(0.5) translate(-50%, 0); }
   .section01 .boxlist li h3 { font-size: 1.5rem; margin-bottom: 1rem; }
   .section01 .boxlist li h4 { font-size: 1.125rem; margin-bottom: 1rem; }
   .section02 { height: 260px; }
@@ -310,7 +310,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section08 { height: 250px; }
   .section08 .tit { width: 80%; margin: 0 auto; padding-top: 5rem; }
   .section07 .boxlist .boxlist_con { padding: 3rem 1rem; }
-  .section07 .boxlist .boxlist_con li { height: 450px; }
+  .section07 .boxlist .boxlist_con li { height: 500px; }
   .section07 .boxlist .boxlist_con li h3 { font-size: 1rem; }
   .section07 .boxlist .boxlist_con li p { font-size: 0.75rem; line-height: 2; }
   .section07 .boxlist .boxlist_con li .bottom .piceold { font-size: 0.75rem; }
