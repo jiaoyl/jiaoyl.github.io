@@ -59,7 +59,7 @@ $(function () {
 	if(winWidth>420){
 		Carousel.init($('.carousel'));
 	}else{
-		$('.carousel').attr('data-setting','{"width":700,"height":251,"posterWidth":110,"posterHeight":210, "verticalAlign":"bottom","autoPlay":false,"speed":1000,				             "delay":2500,"scale":0.9}');
+		$('.carousel').attr('data-setting','{"width":420,"height":251,"posterWidth":110,"posterHeight":210, "verticalAlign":"bottom","autoPlay":false,"speed":1000,				             "delay":2500,"scale":0.9}');
 		Carousel.init($('.carousel'));
 	}
 	if(winWidth>768){

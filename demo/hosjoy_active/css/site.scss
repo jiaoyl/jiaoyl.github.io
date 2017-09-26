@@ -298,8 +298,8 @@ input[type="radio"] {
 		top: -40px;
 	}
 	.tit{
-		padding-top: 4rem;
-		font-size: 1.875rem;
+		padding-top:5rem;
+		font-size: 1.5rem;
 		color: #FE6B15;
 		text-align: center;
 	}
@@ -465,13 +465,13 @@ input[type="radio"] {
 		padding-top:62px;
 	}
 	.poster-main {
-		width: 2500px;
+		width: 1400px;
 		overflow: hidden;
 	    height: 652px;
 	    position: absolute;
 	    left: 50%;
 	    bottom:0;
-	    margin-left: -1250px;
+	    margin-left: -700px;
 	  	.poster-list{
 	  		width: 1400px;
 	  		.list-item {
@@ -492,6 +492,7 @@ input[type="radio"] {
 	 		}
 	 	}
 	 	.poster-btn{
+	 		display: none;
 	 		position: absolute;
 	 		width: 50%;
 	 		height: 100%;
@@ -1033,13 +1034,14 @@ input[type="radio"] {
 			padding-top:1rem;
 		}
 		.poster-main {
-			width: 700px;
+//			width: 700px;
+			width: 100%;
 			overflow: hidden;
 		    height:252px;
 		    position: absolute;
-		    left: 50%;
+		    left:0%;
 		    bottom:0;
-		    margin-left: -350px;
+		    margin-left:0;
 		  	.poster-list{
 		  		width:700px;
 		  		.list-item {

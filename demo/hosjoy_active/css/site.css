@@ -71,7 +71,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 .frombox .frombox_in { padding: 0 2% 0 50%; }
 .frombox .frombox_tel { padding-top: 1.5rem; padding-left: 1rem; padding-right: 1rem; text-align: center; }
 .frombox .frombox_ask { position: absolute; right: 5px; top: -40px; }
-.frombox .tit { padding-top: 4rem; font-size: 1.875rem; color: #FE6B15; text-align: center; }
+.frombox .tit { padding-top: 5rem; font-size: 1.5rem; color: #FE6B15; text-align: center; }
 .frombox .titinfo { font-size: 0.875rem; color: #4c4c4c; text-align: center; }
 .frombox .frombox_ul li { float: left; width: 48%; font-size: 1.5rem; padding-top: 1rem; padding-right: 2%; }
 .frombox .frombox_ul li label { width: 38%; }
@@ -105,12 +105,12 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 
 .section06 { background-image: url(../img/section06_bg.jpg); }
 .section06 .container { width: 1300; overflow: hidden; min-height: 792px; padding-top: 62px; }
-.section06 .poster-main { width: 2500px; overflow: hidden; height: 652px; position: absolute; left: 50%; bottom: 0; margin-left: -1250px; }
+.section06 .poster-main { width: 1400px; overflow: hidden; height: 652px; position: absolute; left: 50%; bottom: 0; margin-left: -700px; }
 .section06 .poster-main .poster-list { width: 1400px; }
 .section06 .poster-main .poster-list .list-item { position: absolute; left: 0; }
 .section06 .poster-main .poster-list .list-item a { display: block; width: 100%; height: 100%; border: 0; }
 .section06 .poster-main .poster-list .list-item img { display: block; width: 100%; height: 100%; border: 0; }
-.section06 .poster-main .poster-btn { position: absolute; width: 50%; height: 100%; top: 0; left: 0px; cursor: pointer; }
+.section06 .poster-main .poster-btn { display: none; position: absolute; width: 50%; height: 100%; top: 0; left: 0px; cursor: pointer; }
 .section06 .poster-main .poster-btn.poster-next-btn { left: auto; right: 0; }
 
 .section07 { background-image: url(../img/section05_bg.png); }
@@ -267,7 +267,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section08 { height: 450px; }
   .section08 .tit { width: 80%; margin: 0 auto; }
   .section06 .container { width: 100%; min-height: 280px; padding-top: 1rem; }
-  .section06 .poster-main { width: 700px; overflow: hidden; height: 252px; position: absolute; left: 50%; bottom: 0; margin-left: -350px; }
+  .section06 .poster-main { width: 100%; overflow: hidden; height: 252px; position: absolute; left: 0%; bottom: 0; margin-left: 0; }
   .section06 .poster-main .poster-list { width: 700px; }
   .section06 .poster-main .poster-list .list-item { position: absolute; left: 0; }
   .section06 .poster-main .poster-list .list-item a { display: block; width: 100%; height: 100%; border: 0; }
