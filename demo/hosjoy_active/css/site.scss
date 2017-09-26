@@ -282,7 +282,16 @@ input[type="radio"] {
 	position: relative;
 	border: 1px dashed #FE6B15;
 	background: url(../img/ask_tel.jpg) no-repeat left top;
-	padding:0 2% 0 50%;
+	padding-bottom: 1rem;
+	.frombox_in{
+		padding:0 2% 0 50%;
+	}
+	.frombox_tel{
+		padding-top: 1.5rem;
+		padding-left: 1rem;
+		padding-right: 1rem;
+		text-align: center;
+	}
 	.frombox_ask{
 		position: absolute;
 		right: 5px;
@@ -891,8 +900,6 @@ input[type="radio"] {
 			min-height:auto;
 			background-size:auto 95%;
 			-webkit-background-size:auto 95%;
-			padding:0 2% 2rem 50%;
-
 			.tit{
 				font-size: 1.5rem;
 				padding-top: 3rem;
@@ -1108,7 +1115,7 @@ input[type="radio"] {
 			margin:3rem auto;
 			background-size:auto 75%;
 			-webkit-background-size:auto 75%;
-			padding:0 2% 2rem 50%;
+			padding-bottom: 2rem;
 
 			.tit{
 				font-size: 1rem;
@@ -1287,7 +1294,21 @@ input[type="radio"] {
 			margin:3rem auto;
 			background-size:auto 35%;
 			-webkit-background-size:auto 35%;
-			padding:8rem 2% 2rem;
+
+			.frombox_in{
+				padding:8rem 2% 0rem;
+			}
+			.frombox_ask{
+				position: absolute;
+				right: 5px;
+				top: -30px;
+				width:50%;
+				font-size: 0.75rem;
+				text-align: right;
+				img{
+					max-width:30%;
+				}
+			}
 
 			.tit{
 				font-size:0.875rem;
@@ -1413,16 +1434,7 @@ input[type="radio"] {
 		}
 	}
 	.frombox{
-		.frombox_ask{
-			position: absolute;
-			right: 5px;
-			top: -30px;
-			width:50%;
-			font-size: 0.75rem;
-			img{
-				max-width:30%;
-			}
-		}
+
 		.titinfo{
 			font-size:0.75rem;
 		}

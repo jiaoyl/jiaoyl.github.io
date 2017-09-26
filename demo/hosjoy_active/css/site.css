@@ -67,7 +67,9 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 .banner .boxlist h3 { padding-bottom: 10px; }
 .banner .boxlist li { font-size: 1rem; line-height: 2; color: #fffe97; }
 
-.frombox { margin: 6rem auto 3rem; min-height: 510px; position: relative; border: 1px dashed #FE6B15; background: url(../img/ask_tel.jpg) no-repeat left top; padding: 0 2% 0 50%; }
+.frombox { margin: 6rem auto 3rem; min-height: 510px; position: relative; border: 1px dashed #FE6B15; background: url(../img/ask_tel.jpg) no-repeat left top; padding-bottom: 1rem; }
+.frombox .frombox_in { padding: 0 2% 0 50%; }
+.frombox .frombox_tel { padding-top: 1.5rem; padding-left: 1rem; padding-right: 1rem; text-align: center; }
 .frombox .frombox_ask { position: absolute; right: 5px; top: -40px; }
 .frombox .tit { padding-top: 4rem; font-size: 1.875rem; color: #FE6B15; text-align: center; }
 .frombox .titinfo { font-size: 0.875rem; color: #4c4c4c; text-align: center; }
@@ -234,7 +236,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section07 .boxlist .boxlist_con li .bottom .pice { font-size: 2rem; }
   .section07 .boxlist .boxlist_con li .bottom .btn { font-size: 1.125rem; line-height: 2; }
   .section07 .boxlist .boxlist_con li .bottom .btn:after { right: -4rem; margin-top: -1rem; width: 3rem; height: 2.1rem; }
-  .frombox { margin: 6rem auto 3rem; min-height: auto; background-size: auto 95%; -webkit-background-size: auto 95%; padding: 0 2% 2rem 50%; }
+  .frombox { margin: 6rem auto 3rem; min-height: auto; background-size: auto 95%; -webkit-background-size: auto 95%; }
   .frombox .tit { font-size: 1.5rem; padding-top: 3rem; }
   .frombox .titinfo { font-size: 0.75rem; }
   .frombox .frombox_ul li { font-size: 1.125rem; }
@@ -280,7 +282,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section07 .boxlist .boxlist_con li .bottom .pice { font-size: 2rem; }
   .section07 .boxlist .boxlist_con li .bottom .btn { font-size: 1.125rem; line-height: 2; }
   .section07 .boxlist .boxlist_con li .bottom .btn:after { right: -4rem; margin-top: -1rem; width: 3rem; height: 2.1rem; }
-  .frombox { margin: 3rem auto; background-size: auto 75%; -webkit-background-size: auto 75%; padding: 0 2% 2rem 50%; }
+  .frombox { margin: 3rem auto; background-size: auto 75%; -webkit-background-size: auto 75%; padding-bottom: 2rem; }
   .frombox .tit { font-size: 1rem; padding-top: 2rem; }
   .frombox .titinfo { font-size: 0.75rem; }
   .frombox .frombox_ul li { font-size: 1rem; }
@@ -320,7 +322,10 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section07 .boxlist .boxlist_con li .bottom .pice { font-size: 1rem; margin-bottom: 0.5rem; }
   .section07 .boxlist .boxlist_con li .bottom .btn { font-size: 0.875rem; line-height: 2; }
   .section07 .boxlist .boxlist_con li .bottom .btn:after { right: -2.5rem; margin-top: -0.75rem; width: 2rem; height: 1.5rem; }
-  .frombox { margin: 3rem auto; background-size: auto 35%; -webkit-background-size: auto 35%; padding: 8rem 2% 2rem; }
+  .frombox { margin: 3rem auto; background-size: auto 35%; -webkit-background-size: auto 35%; }
+  .frombox .frombox_in { padding: 8rem 2% 0rem; }
+  .frombox .frombox_ask { position: absolute; right: 5px; top: -30px; width: 50%; font-size: 0.75rem; text-align: right; }
+  .frombox .frombox_ask img { max-width: 30%; }
   .frombox .tit { font-size: 0.875rem; padding-top: 2rem; }
   .frombox .titinfo { font-size: 0.875rem; }
   .frombox .frombox_ul li { font-size: 0.875rem; }
@@ -347,8 +352,6 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section07 .boxlist .boxlist_con li .bottom .pice { font-size: 0.875rem; margin-bottom: 0.5rem; }
   .section07 .boxlist .boxlist_con li .bottom .btn { font-size: 0.875rem; line-height: 2; }
   .section07 .boxlist .boxlist_con li .bottom .btn:after { right: -1.8rem; margin-top: -0.5rem; width: 1.5rem; height: 1rem; }
-  .frombox .frombox_ask { position: absolute; right: 5px; top: -30px; width: 50%; font-size: 0.75rem; }
-  .frombox .frombox_ask img { max-width: 30%; }
   .frombox .titinfo { font-size: 0.75rem; }
   .frombox .frombox_ul li { font-size: 0.75rem; }
   .frombox .input_txt { font-size: 0.75rem; }
