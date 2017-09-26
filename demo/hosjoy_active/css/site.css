@@ -249,7 +249,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .header { width: 100px; left: 5%; margin-left: auto; }
   .banner { min-width: auto; height: 400px; }
   .banner .boxlist { padding: 3rem 2rem 0; }
-  .container { width: auto; }
+  .container { width: 100%; overflow: hidden; }
   .section { min-width: auto; }
   .section .box { max-width: 50%; padding-top: 15%; }
   .section .box .b-tit { margin-bottom: 2rem; }
@@ -296,7 +296,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .banner { height: 260px; }
   .banner .boxlist { top: 10%; right: auto; padding: 2rem 2rem; width: 400px; height: 150px; transform: scale(0.6); -webkit-transform: scale(0.6); -moz-transform: scale(0.6); -ms-transform: scale(0.6); }
   .banner .boxlist li { font-size: 0.75rem; }
-  .section .box { max-width: 90%; padding-top: 15%; }
+  .section .box { max-width: 80%; padding-top: 15%; }
   .section .box .b-tit { margin-bottom: 2rem; max-width: 70%; }
   .section .box .b-con { font-size: 0.75rem; }
   .section01 .boxlist { width: 680px; padding: 0 3rem; transform: scale(0.5) translate(-50%, 0); -webkit-transform: scale(0.5) translate(-50%, 0); -moz-transform: scale(0.5) translate(-50%, 0); -ms-transform: scale(0.5) translate(-50%, 0); }
@@ -304,9 +304,11 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section01 .boxlist li h4 { font-size: 1.125rem; margin-bottom: 1rem; }
   .section02 { height: 260px; }
   .section03 { height: 260px; }
+  .section03 .box { right: 0; }
   .section04 { height: 260px; }
   .section04 .box .b-con { line-height: 2; }
-  .section05 .boxlist p { font-size: 1rem; }
+  .section05 .boxlist { padding: 2rem 0; }
+  .section05 .boxlist p { padding: 1rem; font-size: 0.875rem; }
   .section08 { height: 250px; }
   .section08 .tit { width: 80%; margin: 0 auto; padding-top: 5rem; }
   .section07 .boxlist .boxlist_con { padding: 3rem 1rem; }
