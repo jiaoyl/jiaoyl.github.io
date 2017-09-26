@@ -313,7 +313,7 @@ input[type="radio"] {
 	.input_txt{
 		width:50%;
 		font-size: 1.5rem;
-		line-height:2rem;
+		line-height:2;
 		padding:0 2%;
 		border: none;
 		border-bottom:1px solid #4C4C4C;
@@ -1166,11 +1166,10 @@ input[type="radio"] {
 		height:260px;
 		.boxlist{
 			top: 10%;
-			right:auto;
 			padding:2rem 2rem;
 			width:400px;
 			height:150px;
-			@include transform-all(scale(0.6));
+			@include transform-all(scale(0.6) translate(40%,0));
 			li{
 				font-size: 0.75rem;
 				//@include transform-all(scale(0.6));
@@ -1179,11 +1178,11 @@ input[type="radio"] {
 	}
 	.section{
 		.box{
-			max-width:80%;
+			max-width:60%;
 			padding-top:15%;
 			.b-tit{
 				margin-bottom: 2rem;
-				max-width:70%;
+				max-width:90%;
 			}
 			.b-con{
 				font-size:0.75rem;
@@ -1204,6 +1203,9 @@ input[type="radio"] {
 				h4{
 					font-size:1.125rem;
 					margin-bottom: 1rem;
+				}
+				p{
+					height: 10rem;
 				}
 			}
 		}
@@ -1247,7 +1249,7 @@ input[type="radio"] {
 			.boxlist_con {
 				padding:3rem 1rem;
 				li{
-					height:500px;
+					height:550px;
 					h3{
 						font-size:1rem;
 					}
@@ -1334,7 +1336,108 @@ input[type="radio"] {
 }
 
 
-@include max-screen(360px){
+@include max-screen(320px){
+	.section{
+		.box{
+			padding-top:10%;
+			.b-tit{
+				margin-bottom:0.5rem;
+				max-width:100%;
+			}
+		}
+	}
+	.section01{
+		.boxlist{
+			width:560px;
+			padding: 0 3rem;
+			@include transform-all(scale(0.5) translate(-50%,0));
+			li{
+				p{
+					height: 11rem;
+				}
+			}
+		}
+	}
+
+	.section02{
+		height:200px;
+	}
+	.section03{
+		height:200px;
+	}
+	.section04{
+		height:200px;
+	}
+	.section05{
+		.boxlist{
+			p{
+				font-size: 0.75rem;
+			}
+		}
+	}
+
+	.section07{
+		.boxlist{
+			.boxlist_con {
+				li{
+					height:550px;
+					h3{
+						font-size:0.75rem;
+					}
+					p{
+						font-size:0.75rem;
+						line-height:1.8;
+					}
+					.bottom{
+						.piceold{
+							font-size: 0.75rem;
+						}
+						.pice{
+							font-size:0.875rem;
+							margin-bottom: 0.5rem;
+						}
+						.btn{
+							font-size:0.875rem;
+							line-height: 2;
+							&:after{
+								right: -1.8rem;
+								margin-top:-0.5rem;
+								width:1.5rem;
+								height:1rem;
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+	.frombox{
+		.frombox_ask{
+			position: absolute;
+			right: 5px;
+			top: -30px;
+			width:50%;
+			font-size: 0.75rem;
+			img{
+				max-width:30%;
+			}
+		}
+		.titinfo{
+			font-size:0.75rem;
+		}
+		.frombox_ul li{
+			font-size:0.75rem;
+		}
+
+		.input_txt{
+			font-size:0.75rem;
+		}
+		.input_btn{
+			font-size:0.75rem;
+		}
+	}
+
+
 
 }
-
