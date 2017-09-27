@@ -140,13 +140,13 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 .section09 .boxlist li { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; position: relative; overflow: hidden; width: 100px; height: 620px; box-shadow: 0px 0px 10px #333; }
 .section09 .boxlist li img { max-width: 1000%; max-height: 1000%; width: 600px; height: 610px; padding: 5px; background: #fff; box-shadow: 0px 0px 10px #333; }
 
-.footer { background: #fff; }
-.footer .container { max-width: 1200px; padding: 5rem 0; text-align: right; }
-.footer .footlf { float: left; padding-left: 8%; display: inline-block; vertical-align: middle; }
+.footer .container { max-width: 1200px; padding: 3rem 0; text-align: center; }
+.footer .footlf { max-width: 20%; display: inline-block; vertical-align: middle; }
 .footer .footer_img { max-width: 25%; display: inline-block; vertical-align: middle; }
-.footer .footer_p { max-width: 55%; text-align: left; padding-left: 10px; display: inline-block; vertical-align: middle; font-size: 1rem; color: #4c4c4c; }
+.footer .footer_img01 { max-width: 25%; padding-right: 3%; display: inline-block; vertical-align: middle; }
+.footer .footer_p { max-width: 40%; text-align: left; padding-left: 10px; display: inline-block; vertical-align: middle; font-size: 1rem; color: #4c4c4c; }
 .footer .footer_p p { font-size: 1rem; margin: 1.875rem 0; }
-.footer .footer_copy { margin-top: 4rem; text-align: center; font-size: 1rem; color: #4c4c4c; }
+.footer .footer_copy { margin-top: 3rem; text-align: center; font-size: 1rem; color: #4c4c4c; }
 
 .act_nav { background: url(images/bottom.png) no-repeat top center; height: 65px; position: fixed; left: 0; bottom: 0; z-index: 500; width: 100%; }
 
@@ -242,10 +242,11 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .frombox .frombox_ul li { font-size: 1.125rem; }
   .frombox .input_txt { font-size: 1.125rem; }
   .frombox .input_btn { font-size: 1.125rem; line-height: 2.5rem; }
-  .footer .container { padding: 3rem 0; text-align: right; }
-  .footer .footlf { padding-left: 2%; max-width: 25%; }
-  .footer .footer_img { max-width: 25%; }
-  .footer .footer_p { max-width: 45%; text-align: left; }
+  .footer .footlf { max-width: 15%; }
+  .footer .footer_img { max-width: 15%; }
+  .footer .footer_img01 { max-width: 22%; }
+  .footer .footer_p { max-width: 35%; text-align: left; }
+  .footer .footer_p p { margin: 0; }
   .footer .footer_copy { margin-top: 2rem; font-size: 0.875rem; } }
 @media all and (max-width: 768px) { body { font-size: 14px; }
   .header { width: 100px; left: 5%; margin-left: auto; }
@@ -288,10 +289,10 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .frombox .frombox_ul li { font-size: 1rem; }
   .frombox .input_txt { font-size: 1rem; }
   .frombox .input_btn { font-size: 1rem; line-height: 2; }
-  .footer .footlf { padding-left: 2%; max-width: 25%; }
-  .footer .footer_img { max-width: 18%; }
-  .footer .footer_p { max-width: 45%; }
-  .footer .footer_p p { font-size: 0.75rem; }
+  .footer .footlf { max-width: 15%; }
+  .footer .footer_img { max-width: 15%; }
+  .footer .footer_p { max-width: 40%; }
+  .footer .footer_p p { font-size: 0.75rem; margin: 0; }
   .footer .footer_copy { margin-top: 2rem; font-size: 0.875rem; } }
 @media all and (max-width: 420px) { body { font-size: 12px; }
   .header { width: 60px; padding: 0.75rem; }
@@ -332,9 +333,10 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .frombox .input_txt { font-size: 0.875rem; }
   .frombox .input_btn { font-size: 0.875rem; line-height: 2; }
   .footer .container { text-align: center; }
-  .footer .footlf { padding-left: 2%; max-width: 40%; }
-  .footer .footer_img { max-width: 40%; }
-  .footer .footer_p { max-width: 90%; }
+  .footer .footlf { max-width: 30%; }
+  .footer .footer_img { max-width: 25%; }
+  .footer .footer_img01 { max-width: 30%; }
+  .footer .footer_p { max-width: 90%; padding-top: 0.75rem; }
   .footer .footer_p p { font-size: 0.75rem; }
   .footer .footer_copy { margin-top: 1rem; font-size: 0.875rem; } }
 @media all and (max-width: 320px) { .section .box { padding-top: 10%; }

@@ -663,15 +663,13 @@ input[type="radio"] {
 
 //公共底部
 .footer{
-    background: #fff;
     .container{
     	max-width: 1200px;
-        padding:5rem 0;
-        text-align: right;
+        padding:3rem 0;
+        text-align:center;
     }
     .footlf{
-    	float: left;
-        padding-left:8%;
+    	max-width:20%;
         display: inline-block;
         vertical-align: middle;
     }
@@ -680,8 +678,14 @@ input[type="radio"] {
         display: inline-block;
         vertical-align: middle;
     }
+    .footer_img01{
+    	max-width:25%;
+    	padding-right:3%;
+        display: inline-block;
+        vertical-align: middle;
+    }
     .footer_p{
-    	max-width:55%;
+    	max-width:40%;
     	text-align:left;
         padding-left: 10px;
         display: inline-block;
@@ -694,7 +698,7 @@ input[type="radio"] {
         }
     }
     .footer_copy{
-        margin-top: 4rem;
+        margin-top:3rem;
         text-align: center;
         font-size:1rem;
         color: #4c4c4c;
@@ -924,20 +928,21 @@ input[type="radio"] {
 
 	//公共底部
 	.footer{
-	    .container{
-	        padding:3rem 0;
-	        text-align: right;
-	    }
 	    .footlf{
-	        padding-left:2%;
-	        max-width:25%;
+	        max-width:15%;
 	    }
-	   .footer_img{
-			 max-width:25%;
+	    .footer_img{
+			 max-width:15%;
+	    }
+	    .footer_img01{
+			 max-width:22%;
 	    }
 	    .footer_p{
-	    	 max-width:45%;
+	    	max-width:35%;
 	    	 text-align:left;
+	    	p{
+	    		 margin:0;
+	    	}
 	    }
 	    .footer_copy{
 	        margin-top:2rem;
@@ -1142,16 +1147,16 @@ input[type="radio"] {
 	//公共底部
 	.footer{
 	    .footlf{
-	        padding-left:2%;
-	        max-width:25%;
+	        max-width:15%;
 	    }
 	   .footer_img{
-			 max-width:18%;
+			 max-width:15%;
 	    }
 	    .footer_p{
-	    	 max-width:45%;
+	    	 max-width:40%;
 	    	 p{
 	    	 	font-size: 0.75rem;
+	    	 	margin: 0;
 	    	 }
 	    }
 	    .footer_copy{
@@ -1338,14 +1343,17 @@ input[type="radio"] {
 			text-align: center;
 		}
 	    .footlf{
-	        padding-left:2%;
-	        max-width:40%;
+	        max-width:30%;
 	    }
-	   .footer_img{
-			 max-width:40%;
+	    .footer_img{
+			 max-width:25%;
+	    }
+	   .footer_img01{
+			max-width:30%;
 	    }
 	    .footer_p{
 	    	 max-width:90%;
+	    	 padding-top:0.75rem;
 	    	 p{
 	    	 	font-size: 0.75rem;
 	    	 }
