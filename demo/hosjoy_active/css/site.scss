@@ -1163,7 +1163,7 @@ input[type="radio"] {
 	    }
 	    .footer_copy{
 	        margin-top:2rem;
-	        font-size: 0.875rem;
+	        font-size: 0.75rem;
 	    }
 
 	}
@@ -1327,7 +1327,15 @@ input[type="radio"] {
 			margin:3rem auto;
 			background-size:auto 35%;
 			-webkit-background-size:auto 35%;
-
+			position:relative;
+			.from_toptel{
+				display:block;
+				position:absolute;
+				top:0;
+				left:0;
+				width:60%;
+				height:9rem;
+			}
 			.frombox_in{
 				padding:8rem 2% 0rem;
 			}
@@ -1385,7 +1393,7 @@ input[type="radio"] {
 	    }
 	    .footer_copy{
 	        margin-top:1rem;
-	        font-size: 0.875rem;
+	        padding:0 1rem;
 	    }
 
 	}
