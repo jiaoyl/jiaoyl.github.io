@@ -282,12 +282,12 @@ input[type="radio"] {
 	position: relative;
 	border: 1px dashed #FE6B15;
 	background: url(../img/ask_tel.jpg) no-repeat left top;
-	padding-bottom: 1rem;
+	padding-bottom: 1.5rem;
 	.frombox_in{
-		padding:0 2% 0 50%;
+		padding:0 2% 2rem 50%;
 	}
 	.frombox_tel{
-		padding-top: 1.5rem;
+		padding-top:2rem;
 		padding-left: 1rem;
 		padding-right: 1rem;
 		text-align: center;
@@ -298,7 +298,7 @@ input[type="radio"] {
 		top: -40px;
 	}
 	.tit{
-		padding-top:5rem;
+		padding-top:3rem;
 		font-size: 1.5rem;
 		color: #FE6B15;
 		text-align: center;
@@ -312,7 +312,7 @@ input[type="radio"] {
 		float: left;
 		width:48%;
 		font-size: 1.5rem;
-		padding-top:1rem;
+		padding-top:1.125rem;
 		padding-right: 2%;
 		label{
 			width:38%;
@@ -331,7 +331,7 @@ input[type="radio"] {
 	.input_btn{
 		width:100%;
 		font-size: 1.5rem;
-		line-height: 60px;
+		line-height:4rem;
 		margin-top:20px;
 		text-align: center;
 		color: #fff;
@@ -1124,7 +1124,6 @@ input[type="radio"] {
 			margin:3rem auto;
 			background-size:auto 75%;
 			-webkit-background-size:auto 75%;
-			padding-bottom: 2rem;
 
 			.tit{
 				font-size: 1rem;
@@ -1135,6 +1134,9 @@ input[type="radio"] {
 			}
 			.frombox_ul li{
 				font-size: 1rem;
+			}
+			.frombox_tel{
+				padding-top:1rem
 			}
 
 			.input_txt{
