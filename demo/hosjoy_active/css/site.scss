@@ -1407,7 +1407,7 @@ input[type="radio"] {
 		.boxlist{
 			width:560px;
 			padding: 0 3rem;
-			@include transform-all(scale(0.5) translate(-50%,0));
+			@include transform-all(scale(0.5) translate(-52%,0));
 			li{
 				p{
 					height: 11rem;

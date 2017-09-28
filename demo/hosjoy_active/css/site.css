@@ -346,7 +346,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .footer .footer_copy { margin-top: 1rem; font-size: 0.875rem; } }
 @media all and (max-width: 320px) { .section .box { padding-top: 10%; }
   .section .box .b-tit { margin-bottom: 0.5rem; max-width: 100%; }
-  .section01 .boxlist { width: 560px; padding: 0 3rem; transform: scale(0.5) translate(-50%, 0); -webkit-transform: scale(0.5) translate(-50%, 0); -moz-transform: scale(0.5) translate(-50%, 0); -ms-transform: scale(0.5) translate(-50%, 0); }
+  .section01 .boxlist { width: 560px; padding: 0 3rem; transform: scale(0.5) translate(-52%, 0); -webkit-transform: scale(0.5) translate(-52%, 0); -moz-transform: scale(0.5) translate(-52%, 0); -ms-transform: scale(0.5) translate(-52%, 0); }
   .section01 .boxlist li p { height: 11rem; }
   .section02 { height: 200px; }
   .section03 { height: 200px; }
