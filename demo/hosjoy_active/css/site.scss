@@ -870,7 +870,6 @@ input[type="radio"] {
 					height:500px;
 					h3{
 						font-size:1.5rem;
-						line-height:2rem;
 					}
 					p{
 						font-size: 1rem;
@@ -1265,22 +1264,39 @@ input[type="radio"] {
 	.section07{
 		.boxlist{
 			.boxlist_con {
-				padding:3rem 1rem;
+				padding:1rem 0;
 				li{
-					height:550px;
+					float:none;
+					width:auto;
+					height:auto;
+					display:block;
+					padding:1rem;
+					border-left:none;
+					border-bottom:1px solid #ddd;
+					&:first-child{
+						padding-left:1rem;
+					}
+					&:last-child{
+						border-bottom:none
+					}
 					h3{
-						font-size:1rem;
+						font-size:1.25rem;
+						margin-bottom:0.5rem;
 					}
 					p{
-						font-size:0.75rem;
+						font-size:0.875rem;
 						line-height:2;
 					}
 					.bottom{
+						position:relative;
+						width:100%;
+						padding-top:1rem;
 						.piceold{
-							font-size: 0.75rem;
+							font-size: 0.875rem;
+							line-height:2;
 						}
 						.pice{
-							font-size:1rem;
+							font-size:1.125rem;
 							margin-bottom: 0.5rem;
 						}
 						.btn{
@@ -1415,33 +1431,13 @@ input[type="radio"] {
 		.boxlist{
 			.boxlist_con {
 				li{
-					height:550px;
 					h3{
-						font-size:0.75rem;
+						font-size:1rem;
 					}
 					p{
 						font-size:0.75rem;
-						line-height:1.8;
 					}
-					.bottom{
-						.piceold{
-							font-size: 0.75rem;
-						}
-						.pice{
-							font-size:0.875rem;
-							margin-bottom: 0.5rem;
-						}
-						.btn{
-							font-size:0.875rem;
-							line-height: 2;
-							&:after{
-								right: -1.8rem;
-								margin-top:-0.5rem;
-								width:1.5rem;
-								height:1rem;
-							}
-						}
-					}
+
 				}
 
 			}
