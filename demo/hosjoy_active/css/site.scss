@@ -1214,15 +1214,16 @@ input[type="radio"] {
 			@include transform-all(scale(0.5) translate(-50%,0));
 			li{
 				h3{
-					font-size: 1.5rem;
+					font-size:2.125rem;
 					margin-bottom: 1rem;
 				}
 				h4{
-					font-size:1.125rem;
+					font-size:1.25rem;
 					margin-bottom: 1rem;
 				}
 				p{
 					height: 10rem;
+					font-size:1.125rem;
 				}
 			}
 		}

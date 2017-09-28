@@ -304,9 +304,9 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section .box .b-tit { margin-bottom: 2rem; max-width: 90%; }
   .section .box .b-con { font-size: 0.75rem; }
   .section01 .boxlist { width: 680px; padding: 0 3rem; transform: scale(0.5) translate(-50%, 0); -webkit-transform: scale(0.5) translate(-50%, 0); -moz-transform: scale(0.5) translate(-50%, 0); -ms-transform: scale(0.5) translate(-50%, 0); }
-  .section01 .boxlist li h3 { font-size: 1.5rem; margin-bottom: 1rem; }
-  .section01 .boxlist li h4 { font-size: 1.125rem; margin-bottom: 1rem; }
-  .section01 .boxlist li p { height: 10rem; }
+  .section01 .boxlist li h3 { font-size: 2.125rem; margin-bottom: 1rem; }
+  .section01 .boxlist li h4 { font-size: 1.25rem; margin-bottom: 1rem; }
+  .section01 .boxlist li p { height: 10rem; font-size: 1.125rem; }
   .section02 { height: 260px; }
   .section03 { height: 260px; }
   .section03 .box { right: 0; }
