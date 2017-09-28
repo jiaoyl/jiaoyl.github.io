@@ -129,7 +129,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 .section07 .boxlist .boxlist_con li .bottom .btn:after { content: '\20'; position: absolute; top: 50%; right: -4rem; margin-top: -1rem; width: 3rem; height: 2.1rem; background: url(../img/icon_love.jpg) no-repeat center center; background-size: cover; -webkit-background-size: cover; }
 
 .section08 { background-image: url(../img/section08_bg.jpg); height: 572px; }
-.section08 .tit { padding-top: 3rem; text-align: center; }
+.section08 .tit { padding-top: 4rem; text-align: center; }
 
 .animation01 { -webkit-transition: opacity 0.8s, -webkit-transform 0.8s; transition: opacity 0.8s, transform 0.8s; opacity: 0; filter: alpha(opacity=0) \9; -webkit-transform: translateY(50px); -ms-transform: translateY(50px); transform: translateY(50px); }
 
@@ -314,7 +314,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
   .section05 .boxlist { padding: 2rem 0; }
   .section05 .boxlist p { padding: 1rem; font-size: 0.875rem; }
   .section08 { height: 250px; }
-  .section08 .tit { width: 80%; margin: 0 auto; padding-top: 5rem; }
+  .section08 .tit { width: 80%; margin: 0 auto; padding-top: 2rem; }
   .section07 .boxlist .boxlist_con { padding: 3rem 1rem; }
   .section07 .boxlist .boxlist_con li { height: 550px; }
   .section07 .boxlist .boxlist_con li h3 { font-size: 1rem; }
