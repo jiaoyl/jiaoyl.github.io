@@ -1036,7 +1036,7 @@ input[type="radio"] {
 	.section06{
 		.container{
 			width: 100%;
-			min-height:280px;
+			min-height:450px;
 			padding-top:1rem;
 		}
 		.poster-main {
@@ -1251,6 +1251,11 @@ input[type="radio"] {
 				padding: 1rem;
 				font-size:0.875rem;
 			}
+		}
+	}
+	.section06{
+		.container {
+			min-height:280px;
 		}
 	}
 	.section08{

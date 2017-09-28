@@ -56,12 +56,27 @@ $(function () {
 
 	$('.banner').addClass('jsshow');
 	var winWidth=$(window).width();
-	if(winWidth>420){
+	if(winWidth>768){
 		Carousel.init($('.carousel'));
-	}else{
-		$('.carousel').attr('data-setting','{"width":420,"height":251,"posterWidth":110,"posterHeight":210, "verticalAlign":"bottom","autoPlay":false,"speed":1000,				             "delay":2500,"scale":0.9}');
+	}else if(winWidth>420 && winWidth<=768){
+		$('.carousel').attr('data-setting','{"width":768,"height":350,"posterWidth":180,"posterHeight":350, "verticalAlign":"bottom","autoPlay":false,"speed":1000,				             "delay":2500,"scale":0.9}');
+		Carousel.init($('.carousel'));
+	}else if(winWidth>=360 && winWidth<=420){
+		$('.carousel').attr('data-setting','{"width":360,"height":251,"posterWidth":110,"posterHeight":210, "verticalAlign":"bottom","autoPlay":false,"speed":1000,				             "delay":2500,"scale":0.9}').css({
+			'left':'50%',
+			'margin-left':'-180px'
+
+		});
+		Carousel.init($('.carousel'));
+	}else if(winWidth<360){
+		$('.carousel').attr('data-setting','{"width":320,"height":251,"posterWidth":110,"posterHeight":210, "verticalAlign":"bottom","autoPlay":false,"speed":1000,				             "delay":2500,"scale":0.9}').css({
+			'left':'50%',
+			'margin-left':'-160px'
+
+		});;
 		Carousel.init($('.carousel'));
 	}
+
 	if(winWidth>768){
 		$(window).scroll(function () {
 	        var e = $(window).scrollTop();
