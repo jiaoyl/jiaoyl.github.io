@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>输出页面-localstroage</title>
+    <link href="css/site.css?11111" rel="stylesheet">
+    <script src="js/jquery-2.1.0.js"></script>
+    <script src="js/storage.js"></script>
+    <script>
+				$(function(){
+					showData();
+					setInterval(function(){showData()},1000);
+
+					function showData(){
+						if(Storage.getFromLocalStorage('name')!=null&&Storage.getFromLocalStorage('name')!=""){
+								$('#shuname').html(Storage.getFromLocalStorage('name'));
+								$('#shutel').html(Storage.getFromLocalStorage('tel'))
+						}else{
+								$('#shuname').html('');
+								$('#shutel').html('')
+						}
+					}
+				})
+    </script>
+  </head>
+  <body>
+  		<div class="wrapper container">
+  			<div class="header">
+  					<h1 class="logo">客户展示-输出页面-localstroage</h1>
+  					<!--<a href="index.html" target="_blank">打开后台页面</a>-->
+  			</div>
+  			<div class="main">
+  					<ul>
+  						<li class="item"><label>输入姓名：</label> <span id="shuname"></span></li>
+  						<li class="item"><label>输入电话：</label> <span id="shutel"></span></li>
+  					</ul>
+
+  			</div>
+  		</div>
+  </body>
+</html>

@@ -266,26 +266,54 @@ body{ background: #fff;}
     @include box-sizing;
 }
 
+.container{
+	padding:0px 10%;
+}
 
-.header{display: block; padding: 38px 10% 48px;}
-.header .logo{width:30%}
+.header{display: block; padding: 20px 0; border-bottom: 1px solid #eee; }
+.header .logo{font-size: 2rem;}
 
-.header{ padding: 0 10%;}
+.main{padding: 20px 0;}
 
 .item{
+	width: 100%;
     display: block; padding: 10px 0;
     label{
     	@include inline-block();
-    	width: 30%;
-		font-size: 14px;
+    	width:38%;
+    	max-width: 10rem;
+		font-size: 1rem;
     	color: #000;
     }
-    input{
+    .ipttxt{
     	width: 60%;
+    	max-width:20rem;
     	border: 1px solid #ccc;
     	padding-left: 10px;
-    	font-size: 14px;
+    	font-size: 1rem;
     	color: #000;
     }
 }
 
+.btn-wrap{
+	margin: 20px 0;
+}
+.btn{
+	@include inline-block();
+	width:100%;
+	min-width: 6rem;
+	max-width:30rem;
+
+	font-size: 1rem;
+	line-height: 2;
+	color: #fff;
+	text-align: center;
+
+	padding:0.25rem 0.5rem;
+	border: 1px solid #59abff;
+	background: #59abff;
+	&:hover{
+		color: #59abff;
+		background:transparent;
+	}
+}

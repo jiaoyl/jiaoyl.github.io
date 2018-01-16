@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>登陆</title>
+    <link href="css/site.css?11111" rel="stylesheet">
+    <script src="js/jquery-2.1.0.js"></script>
+
+    <script>
+				$(function(){
+						$('#login').click(function(){
+									location.href='index.html'
+						})
+				})
+    </script>
+  </head>
+  <body>
+  		<div class="wrapper">
+  			<div class="header">
+  					<h1>登陆</h1>
+  			</div>
+  			<div class="main">
+  					<div class="formbox">
+							<ul>
+				  			<li class="box_input">
+				  					<span>账&nbsp;&nbsp;&nbsp;&nbsp;号</span><input class="textbox default" type="text" name="userId" id="txt_user_Id" autofocus="autofocus" placeholder="手机号/邮箱/用户名">
+				  			</li>
+				  			<li class="box_input">
+				  					<span>密&nbsp;&nbsp;&nbsp;&nbsp;码</span><input class="textbox default" type="password" name="pwd" id="txt_pwd" placeholder="请输入密码">
+				  			</li>
+				  			<li class="box_forget"><a href="/account/forgetpwd.html">忘记密码</a></li>
+				  		</ul>
+							<div><a href="javascript:" id="login" class="btn_login">登陆</a></div>
+					</div>
+  			</div>
+  		</div>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>输入页面-localstroage</title>
+    <link href="css/site.css?11111" rel="stylesheet">
+    <script src="js/jquery-2.1.0.js"></script>
+    <script src="js/storage.js"></script>
+    <script>
+				$(function(){
+						$('#tijiao').on('click',function(){//设置localStorage
+								var name=$.trim($('input#name').val()),
+									  tel=$.trim($('input#tel').val());
+								Storage.setLocalStorage('name', name);
+								Storage.setLocalStorage('tel', tel);
+
+								/*
+								 * 控制打开此页面的父页面自动刷新
+								 * iframe里面的子页，用parent.location.href = parent.location.reload();
+								 * 如果是window.open 打开就用opener.location.reload();
+								*/
+//								window.opener.location.reload();
+						})
+
+						$('#deldata').on('click',function(){//清除localStorage
+								Storage.removeLocalStorage('name');
+								Storage.removeLocalStorage('tel');
+						})
+
+
+				})
+    </script>
+  </head>
+  <body>
+  		<div class="wrapper container">
+  			<div class="header">
+  					<h1 class="logo">输入页面-localstroage</h1>
+  			</div>
+  			<div class="main">
+  					<ul>
+  						<li class="item"><label>您的姓名：</label> <input type="text" name="" id="name" value="" class="ipttxt" /></li>
+  						<li class="item"><label>您的电话：</label> <input type="text" name="" id="tel" value="" class="ipttxt" /></li>
+  					</ul>
+  					<div class="btn-wrap">
+  						<a href="javascript:" class="btn" id='tijiao'>提交</a>
+  						<a href="javascript:" class="btn" id="deldata">删除localStorage记录</a>
+  					</div>
+  			</div>
+  		</div>
+  </body>
+</html>

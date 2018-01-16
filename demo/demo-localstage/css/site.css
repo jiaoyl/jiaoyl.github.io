@@ -60,14 +60,21 @@ body { background: #fff; }
 
 .wrapper { width: 100%; margin-left: auto; margin-right: auto; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
 
-.header { display: block; padding: 38px 10% 48px; }
+.container { padding: 0px 10%; }
 
-.header .logo { width: 30%; }
+.header { display: block; padding: 20px 0; border-bottom: 1px solid #eee; }
 
-.header { padding: 0 10%; }
+.header .logo { font-size: 2rem; }
 
-.item { display: block; padding: 10px 0; }
-.item label { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; width: 30%; font-size: 14px; color: #000; }
-.item input { width: 60%; border: 1px solid #ccc; padding-left: 10px; font-size: 14px; color: #000; }
+.main { padding: 20px 0; }
+
+.item { width: 100%; display: block; padding: 10px 0; }
+.item label { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; width: 38%; max-width: 10rem; font-size: 1rem; color: #000; }
+.item .ipttxt { width: 60%; max-width: 20rem; border: 1px solid #ccc; padding-left: 10px; font-size: 1rem; color: #000; }
+
+.btn-wrap { margin: 20px 0; }
+
+.btn { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle; width: 100%; min-width: 6rem; max-width: 30rem; font-size: 1rem; line-height: 2; color: #fff; text-align: center; padding: 0.25rem 0.5rem; border: 1px solid #59abff; background: #59abff; }
+.btn:hover { color: #59abff; background: transparent; }
 
 /*# sourceMappingURL=site.css.map */

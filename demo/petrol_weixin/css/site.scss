@@ -83,6 +83,15 @@
        -ms-transform:$a;
 }
 
+// 基本颜色
+$color1:                 #fb534a !default;
+$color2:                 #59abff !default;
+$color3:                 #00BC8C !default;
+$color4:                 #FF8033 !default;
+$color5:                 #999 !default;
+$color6:                 #ccc !default;
+$color7:                 #eee !default;
+$color8:                 #f2f2f2;
 * {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -260,32 +269,213 @@ input[type="radio"] {
 }
 
 
-body{ background: #fff;}
+body{ background:$color8;}
 .wrapper{
     @include boxcenter(100%);
     @include box-sizing;
 }
 
 
-.header{display: block; padding: 38px 10% 48px;}
-.header .logo{width:30%}
-
-.header{ padding: 0 10%;}
-
-.item{
-    display: block; padding: 10px 0;
-    label{
-    	@include inline-block();
-    	width: 30%;
-		font-size: 14px;
-    	color: #000;
+.header{
+	position: relative;
+    padding:0.5rem 0;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.2;
+    color: #fff;
+    background:$color2;
+    img{
+        height: 2.56rem;
     }
-    input{
-    	width: 60%;
-    	border: 1px solid #ccc;
-    	padding-left: 10px;
-    	font-size: 14px;
-    	color: #000;
+    .header_lf{
+    	position: absolute;
+    	left:0;
+    	top:50%;
+    	margin-top:-0.6rem;
+    	font-size:1rem;
+    	line-height:1.2rem;
+    	padding: 0 0.75rem;
+    	text-align: center;
+    	color:  $color4;
+    }
+    .header_rt{
+    	position: absolute;
+    	right:0;
+    	top:50%;
+    	margin-top:-0.6rem;
+    	font-size:0.875rem;
+    	line-height:1.2rem;
+    	padding: 0 0.75rem;
+    	text-align: center;
+    	color:  $color4;
     }
 }
 
+
+.btn-wrap{
+	margin: 20px 0;
+}
+.btn{
+	@include inline-block();
+	width:100%;
+	min-width: 6rem;
+	max-width:30rem;
+
+	font-size: 1rem;
+	line-height: 2;
+	color: #fff;
+	text-align: center;
+
+	padding:0.25rem 0.5rem;
+	border: 1px solid #59abff;
+	background: #59abff;
+	&:hover{
+		color: #59abff;
+		background:transparent;
+	}
+}
+
+
+.formbox{
+    background: #fff;
+    padding: 1rem 1.25rem;
+    .tip{
+        font-size: 0.75rem;
+        color: $color6;
+        .icon_warning{
+            width: 1rem;
+            height:1rem;
+        }
+    }
+}
+.box_input{
+    font-size: 0.875rem;
+    padding:0.5rem 0;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid $color7;
+    background: #fff;
+    position: relative;
+    span{@include inline-block(); width:28%;}
+
+    .textbox{
+        @include inline-block();
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+        min-height: 1.25rem;
+        border:none; width:66%;
+        &:focus{outline: none;}
+        &.textbox01{
+            width:35%;
+        }
+        &.style01{
+            font-size: 0.75rem;
+        }
+        &.style02{
+            text-align: right;
+        }
+        &.default{
+            color: #999;
+        }
+        &.input{
+            color: #4c4c4c;
+        }
+
+    }
+
+    .right_arrow{
+        position: absolute;
+        font-size: 0.75rem;
+        line-height: 1rem;
+        top: 50%;
+        right: 0;
+        margin-top: -0.45rem;
+    }
+    &.box_input01{
+        border-bottom: 1px dotted $color6;
+    }
+    &.noborder{
+        border: none;
+    }
+    &.tip{
+        .tip_i{
+           @include inline-block();
+           vertical-align: middle;
+           font-size:0.75rem;
+           line-height: 0.875rem;
+           width: 0.875rem;
+           height: 0.875rem;
+           text-align: center;
+            border: 1px solid $color6;
+            @include border-radius(50%);
+        }
+        padding: 0;
+        font-size:0.75rem;
+        color:$color6;
+    }
+}
+
+.box_forget{
+    text-align: right;
+    a{
+        @include inline-block();
+        padding: 0.5rem;
+        color: $color2;
+    }
+}
+
+.btnbox{
+    padding:2rem 0 1rem;
+     &.btnbox01{
+        padding:2rem 1.25rem 1rem;
+    }
+    &.btnbox02{
+        padding:0 1.25rem;
+        margin:1.5rem 0;
+    }
+}
+.btnbox_fix{
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    z-index: 999;
+
+}
+
+.btn_login{
+    @include inline-block();
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 2.5rem;
+    color: #fff;
+    background:$color2;
+    background-size:cover;
+
+}
+
+.btn_01{
+    width:100%;
+    @include inline-block();
+    font-size: 1.125rem;
+    line-height:2.5;
+    padding: 0 5px;
+    margin: 0;
+    color: #fff;
+    text-align:center;
+    background: $color4;
+    border: none;
+    &.style01{
+       //background: $color2;
+       font-size:1rem;
+    }
+    &.style02{
+        line-height: 2.2;
+        background: $color2;
+    }
+    &.style03{
+        font-size:0.875rem;
+        line-height:2;
+    }
+
+}
