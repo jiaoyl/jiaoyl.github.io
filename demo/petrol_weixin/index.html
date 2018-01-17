@@ -8,7 +8,7 @@
     <link href="css/site.css?11111" rel="stylesheet">
     <script src="js/jquery-2.1.0.js"></script>
 		<script type="text/javascript" src = 'http://webapi.amap.com/maps?v=1.4.0&key=ae739a3c0527a170f263090740fd3f92'></script>
-		
+
   </head>
   <body>
   		<div class="wrapper">
@@ -25,26 +25,24 @@
   			  			mapheight=$(document).height()-$('.header').height();
   			  	$('#mapdiv').css({'width':mapWidth,'height':mapheight})
   			  })
-  			  
+
 		      var map = new AMap.Map('mapdiv', {
 					  resizeEnable: true,
 				    zoom:16,
-				    center: [113.643439,34.738436]     
+				    center: [113.643439,34.738436]
 		     });
-		     var marker = new AMap.Marker({		        
+		     var marker = new AMap.Marker({
 		        position: [113.643439,34.738436],
-		        icon: new AMap.Icon({            
-		            size: new AMap.Size(40, 50),  //图标大小
-		            image: "http://webapi.amap.com/theme/v1.3/images/newpc/way_btn2.png",
-		            imageOffset: new AMap.Pixel(0, -60)
-		        })    
+		        offset: new AMap.Pixel(0, 0),//修改label相对于maker的位置
+		        content: '<div style="border:1px solid #59abff; color:#000; white-space:nowrap; padding:0px 5px; text-align: center;">华城国际中心</div>'   //自定义点标记覆盖物内容
+//		        icon: new AMap.Icon({
+//		            size: new AMap.Size(40, 50),  //图标大小
+//		            image: "http://webapi.amap.com/theme/v1.3/markers/n/mark_r.png",
+//		            imageOffset: new AMap.Pixel(0, -60)
+//		        })
 		    });
 		    marker.setMap(map);
-		    marker.setLabel({//label默认蓝框白底左上角显示，样式className为：amap-marker-label
-		        offset: new AMap.Pixel(20, 20),//修改label相对于maker的位置
-		        content: "华城国际"
-		    });
-				
+
 				 var markers = [{
 			        icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b1.png',
 			        position: [113.644276,34.740217]
@@ -53,7 +51,13 @@
 			        position: [113.643058,34.740283]
 			    }, {
 			        icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b3.png',
-			        position: [113.643745,34.737087]
+			        position: [113.642045,34.737087]
+			    }, {
+			        icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b4.png',
+			        position: [113.645945,34.735087]
+			    }, {
+			        icon: 'http://webapi.amap.com/theme/v1.3/markers/n/mark_b.png',
+			        position: [113.645945,34.739087]
 			    }];
 			    // 添加一些分布不均的点到地图上,地图上添加三个点标记，作为参照
 			    markers.forEach(function(marker) {
@@ -64,21 +68,7 @@
 			            offset: new AMap.Pixel(-12, -36)
 			        });
 			    });
-//		    AMap.service(["AMap.PlaceSearch"], function() {
-//		        var placeSearch = new AMap.PlaceSearch({ //构造地点查询类
-//		            pageSize: 5,
-//		            type: '餐饮服务',
-//		            pageIndex: 1,
-//		            city: "010", //城市
-//		            map: map,
-//		            panel: "panel"
-//		        });
-//		        
-//		        var cpoint = [113.643439,34.738436]  ; //中心点坐标
-//		        placeSearch.searchNearBy('', cpoint, 200, function(status, result) {
-//		
-//		        });
-//		    });
+
 		</script>
   </body>
 </html>
