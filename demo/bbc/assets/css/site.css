@@ -134,11 +134,11 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 
 .icon_up { width: 0.625rem; height: 0.375rem; background-image: url(../img/common/icon_up.png); }
 
-.icon_up02 { width: 2.5rem; height: 2.5rem; background-image: url(../img/common/icon_up02.png); background-size: auto 70%; background-color: #00BC8C; border-radius: 50; -moz-border-radius: 50; -webkit-border-radius: 50; }
+.icon_up02 { width: 2.5rem; height: 2.5rem; background-image: url(../img/common/icon_up2.png); background-size: auto 70%; background-color: #00BC8C; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; }
 
-.icon_buy { width: 2.5rem; height: 2.5rem; background-image: url(../img/common/icon_buy.png); background-size: auto 70%; background-color: #00BC8C; border-radius: 50; -moz-border-radius: 50; -webkit-border-radius: 50; }
+.icon_buy { width: 2.5rem; height: 2.5rem; background-image: url(../img/common/icon_buy.png); background-size: auto 70%; background-color: #fa5073; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; }
 
-.icon_back { width: 2.5rem; height: 2.5rem; background-image: url(../img/common/icon_back.png); background-size: auto 70%; background-color: #00BC8C; border-radius: 50; -moz-border-radius: 50; -webkit-border-radius: 50; }
+.icon_back { width: 2.5rem; height: 2.5rem; background-image: url(../img/common/icon_back.png); background-size: auto 70%; background-color: #9eea6a; border-radius: 50%; -moz-border-radius: 50%; -webkit-border-radius: 50%; }
 
 .icon_phone { width: 1.125rem; height: 1.625rem; background-image: url(../img/common/icon_phone.png); }
 
@@ -1250,13 +1250,13 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 
 .dhbottom_con li { text-align: center; line-height: 2; color: #787879; }
 
-.fix_dhpop { position: fixed; bottom: 6.25rem; right: 0.625rem; z-index: 9999; width: 50%; height: auto; }
+.fix_dhpop { position: fixed; bottom: 6.25rem; right: 0.625rem; z-index: 9999; height: auto; text-align: right; }
 
-.fix_dhpop .after { display: none; }
+.fix_dhpop .after { display: none; background: rgba(255, 255, 255, 0.4); }
 
-.fix_dhpop .after a { display: block; padding: 5px 0; text-align: right; color: #787879; }
+.fix_dhpop .after a { display: block; padding: 5px 0; color: #787879; }
 
-.fix_dhpop .after a span { background: #fff; display: inline-block; padding-right: 5px; vertical-align: middle; }
+.fix_dhpop .after a span { display: inline-block; padding-right: 5px; vertical-align: middle; }
 
 @media all and (min-width: 321px) and (max-width: 360px) { html { font-size: 17px; } }
 
