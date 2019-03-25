@@ -190,7 +190,7 @@
 	width: FpxTorem(40);
 	height: FpxTorem(40);
 	background-image: url(../img/common/icon_up2.png);	
-	background-size: auto 70%;
+	background-size: auto 50%;
 	background-color: $color3;
 	@include border-radius(50%);
 }
@@ -198,7 +198,7 @@
 	width: FpxTorem(40);
 	height: FpxTorem(40);
 	background-image: url(../img/common/icon_buy.png);	
-	background-size: auto 70%;
+	background-size: auto 50%;
 	background-color: $color1;
 	@include border-radius(50%);
 }
@@ -206,8 +206,8 @@
 	width: FpxTorem(40);
 	height: FpxTorem(40);
 	background-image: url(../img/common/icon_back.png);	
-	background-size: auto 70%;
-	background-color:#9eea6a;
+	background-size: auto 50%;
+	background-color:$color3;
 	@include border-radius(50%);
 }
 
@@ -4058,16 +4058,17 @@
 
 .fix_dhpop{
 	position: fixed;
-	bottom: FpxTorem(100);
-	right: FpxTorem(10);
+	bottom: FpxTorem(80);
+	right: 0;
 	z-index: 9999;
-	height: auto;	
+	width: 100%;
 	text-align: right;
+	padding: FpxTorem(10);
 	.after{
 		display: none;
-		background:rgba(255, 255, 255, 0.4);
+		background:rgba(255, 255, 255, 0.7);
 		a{
-			display: block;
+			display: inline-block;
 			padding: 5px 0;
 			color: $textColor_b02;
 			span{				

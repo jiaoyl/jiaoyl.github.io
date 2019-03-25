@@ -1254,7 +1254,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 
 .fix_dhpop .after { display: none; background: rgba(255, 255, 255, 0.7); }
 
-.fix_dhpop .after a { display: block; padding: 5px 0; color: #787879; }
+.fix_dhpop .after a { display: inline-block; padding: 5px 0; color: #787879; }
 
 .fix_dhpop .after a span { display: inline-block; padding-right: 5px; vertical-align: middle; }
 
