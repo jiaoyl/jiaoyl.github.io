@@ -1,0 +1,377 @@
+@charset "utf-8";
+// 参考scss code
+// 提供所有的基础功能包括：变量设置，css3前缀填充，@media，基础mixin，reset样式
+// 开关设置
+//-----------------------------------------------------
+$lte7: true !default; //是否兼容ie6-7
+// font相关
+//-----------------------------------------------------
+$baseFontSize: 16;
+$baseLineHeight: 1.5 !default;
+$baseFontFamily: Helvetica,
+"Microsoft Yahei",
+Tahoma,
+"SimSun",
+"Helvetica Neue" !default;
+// 基本颜色
+//-----------------------------------------------------
+$color1:#fa5073;
+$color2:#4ca1fe;
+$color3: #00BC8C;
+$color4: #eee;
+$color5: #fda443;
+
+$bodyBgColor: #f5f5f5 !default;
+$textColor: #444;
+$textColor_b02: #787879;
+$textColor_b03: #c0bdbd;
+$border_color1: #ebebeb;
+
+
+@mixin inline-block() {
+    display: inline-block;
+
+    @if $lte7 {
+        *display: inline;
+        *zoom: 1;
+    }
+}
+
+@mixin boxcenter($a:1000px) {
+    width: $a;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@mixin box-sizing($a:border-box) {
+    box-sizing: $a;
+    -moz-box-sizing: $a;
+    -webkit-box-sizing: $a;
+}
+
+@mixin border-radius($w:6px) {
+    border-radius: $w;
+    -moz-border-radius: $w;
+    -webkit-border-radius: $w;
+}
+
+@mixin box-shadow($w:1px 1px 1px #000) {
+    box-shadow: $w;
+    -webkit-box-shadow: $w;
+}
+
+@mixin opacity($opacity:50) {
+    //透明
+    opacity: $opacity / 100;
+    -webkit-opacity: $opacity / 100;
+    -moz-opacity: $opacity / 100;
+    filter: alpha(opacity=$opacity);
+}
+
+@mixin min-screen($res) {
+    @media all and (min-width: $res) {
+        @content;
+    }
+}
+
+@mixin max-screen($res) {
+    @media all and (max-width: $res) {
+        @content;
+    }
+}
+
+@mixin maxmin-screen($min, $max) {
+    @media all and (min-width: $min) and (max-width: $max) {
+        @content;
+    }
+}
+
+@mixin animation-all($a) {
+    //动画
+    animation: $a;
+    -webkit-animation: $a;
+    -moz-animation: $a;
+    -ms-animation: $a;
+}
+
+@mixin keyframes ($a) {
+    @-webkit-keyframes #{$a} {
+        @content;
+    }
+
+    @-moz-keyframes #{$a} {
+        @content;
+    }
+
+    @-o-keyframes #{$a} {
+        @content;
+    }
+
+    @keyframes #{$a} {
+        @content;
+    }
+}
+
+@mixin animation($active, $time, $infinite:infinite, $delay:0, $linear:linear, $alternate:alternate) {
+    //动画
+    animation: $active $time $infinite $delay $linear $alternate;
+    -webkit-animation: $active $time $infinite $delay $linear $alternate;
+    -moz-animation: $active $time $infinite $delay $linear $alternate;
+    -ms-animation: $active $time $infinite $delay $linear $alternate;
+}
+
+@mixin animation-argument($arg:delay, $a:1.5s) {
+    //延迟
+    animation-#{$arg}: $a;
+    -webkit-animation-#{$arg}: $a;
+    -moz-animation-#{$arg}: $a;
+    -ms-animation-#{$arg}: $a;
+}
+
+@mixin transform-all($a) {
+    //变形
+    transform: $a;
+    -webkit-transform: $a;
+    -moz-transform: $a;
+    -ms-transform: $a;
+}
+
+@mixin lineargradient($a:90deg, $b: #5d32e0, $c: #1c3dad) {
+    //渐变
+    background: -webkit-linear-gradient($a, $b, $c);
+    background: -o-linear-gradient($a, $b, $c);
+    background: -moz-linear-gradient($a, $b, $c);
+    background: linear-gradient($a, $b, $c);
+
+    @if $lte7 {
+        *background: $c;
+    }
+}
+
+
+@function FpxTorem($px) {
+    //$px为需要转换的字号  px转 rem
+    @return $px / $baseFontSize * 1rem;
+}
+
+
+/*reset*/
+//-----------------------------------------------------
+* {
+    @include box-sizing();
+}
+
+html {
+    font-size: $baseFontSize*1px;
+}
+
+body {
+    font-size: $baseFontSize*1px;
+    line-height: $baseLineHeight;
+    font-family: $baseFontFamily;
+    color: $textColor;
+    background-color: $bodyBgColor;
+    margin: 0 auto;    
+    max-width: 640px;
+    min-width: 320px;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+    display: block;
+}
+
+ul,
+ol,
+li,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+form {
+    margin: 0;
+}
+
+ul,
+ol,
+li,
+dl,
+dd {
+    padding: 0;
+    list-style: none outside none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    max-width: 100%;
+    border: none;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+    line-height: 1.8;
+    font-weight: normal;
+}
+
+h1 {
+    font-size: FpxTorem(20);
+}
+
+h2 {
+    font-size: FpxTorem(18);
+}
+
+h3 {
+    font-size: FpxTorem(12);
+}
+
+h4,
+h5,
+h6,
+p {
+    font-size: FpxTorem(11);
+}
+
+i {
+    font-style: normal;
+}
+
+// links
+a {
+    color: $textColor;
+    text-decoration: none;
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: inherit;
+    font-size: FpxTorem(12);
+    margin: 0;
+    vertical-align: baseline;
+    color: $textColor;
+    border: none;
+    @if $lte7 {
+        *vertical-align: middle;
+    }
+
+    &::-moz-focus-inner {
+        border: 0;
+        padding: 0;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+textarea {
+    resize: vertical;
+    vertical-align: top;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+
+    @if $lte7 {
+        *overflow: visible;
+    }
+}
+
+button[disabled],
+input[disabled] {
+    cursor: default;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+
+    @if $lte7 {
+        *height: 13px;
+        *width: 13px;
+    }
+}
+
+/* float */
+.fl {
+    float: left;
+    _display: inline;
+}
+
+.fr {
+    float: right;
+    _display: inline;
+}
+
+.clearfix,
+.wrapper {
+    *zoom: 1
+}
+
+.clearfix:before,
+.wrapper:before {
+    content: "\20";
+    display: table;
+}
+
+.clearfix:after,
+.wrapper:after {
+    content: "\20";
+    display: table;
+    clear: both;
+    overflow: hidden;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+    visibility: hidden;
+    overflow: hidden
+}
+
+.tct {
+    text-align: center;
+}
+.trt {
+    text-align: right;
+}
+
+.hidden {
+    display: none !important;
+}

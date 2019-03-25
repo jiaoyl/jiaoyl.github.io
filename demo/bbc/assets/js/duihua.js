@@ -6,14 +6,16 @@ $(function () {
 
 
 	$('.btn_boxfix #ipt_duihua').focus(function (e) { 
-		e.preventDefault();
 		$('.dhbottom_con').show();
 	})
 	$('.btn_boxfix #ipt_duihua').blur(function (e) { 
-		e.preventDefault();
 		$('.dhbottom_con').hide();
 	})
 
+	$('.fix_dhpop .before').click(function (e) { 
+		e.preventDefault();
+		$(this).hide();
+		$('.fix_dhpop .after').show();
+	})
 
-	
 })
