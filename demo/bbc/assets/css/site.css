@@ -1250,7 +1250,7 @@ input[type="checkbox"], input[type="radio"] { box-sizing: border-box; padding: 0
 
 .dhbottom_con li { text-align: center; line-height: 2; color: #787879; }
 
-.fix_dhpop { position: fixed; bottom: 5rem; right: 0.625rem; z-index: 9999; height: auto; text-align: right; }
+.fix_dhpop { position: fixed; bottom: 5rem; right: 0; z-index: 9999; width: 100%; text-align: right; padding: 0.625rem; }
 
 .fix_dhpop .after { display: none; background: rgba(255, 255, 255, 0.7); }
 
