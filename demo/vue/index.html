@@ -8,7 +8,7 @@
     <link href="css/site.css?11111" rel="stylesheet">
     <script src="js/jquery-2.1.0.js"></script>
     <script src="js/vue.js"></script>
-    
+    <script src="https://cdn.bootcss.com/axios/0.18.0/axios.min.js"></script>
   </head>
   <body>	
   		<div id="app">
@@ -124,6 +124,40 @@
     ]
   }
 })
+	
+	
+</script>
+
+
+<br><br><br>
+<div id="app-8">
+  <ol>
+    <!-- Now we provide each todo-item with the todo object    -->
+    <!-- it's representing, so that its content can be dynamic -->
+   <!-- <todo-item v-for="item in groceryList" v-bind:todo="item"></todo-item>-->
+  </ol>
+</div>
+<script>
+	var app8 = new Vue({
+		el: '#app-8',
+		data: {
+			lists: [{
+				message:'foo'
+			}]
+		},
+		created: function() {
+			axios.post('/shop/rfList', {
+					size: '4'
+				})
+				.then(function(response) {
+					console.log(response);
+					//vm.data.list=response
+				})
+				.catch(function(error) {
+					console.log(error);
+				});
+		}
+	});
 </script>
 
   </body>
